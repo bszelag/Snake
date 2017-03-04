@@ -33,7 +33,8 @@ entity engine is
     Port ( DI : in  STD_LOGIC_VECTOR (1 downto 0);
            D_Type : in  STD_LOGIC_VECTOR (1 downto 0);
            DI_Rdy : in  STD_LOGIC;
-           Game_Time : in  STD_LOGIC_VECTOR (15 downto 0);
+           Min : in  STD_LOGIC_VECTOR (5 downto 0);
+			  Sec : in  STD_LOGIC_VECTOR (5 downto 0);
            X : in  STD_LOGIC;
            Y : in  STD_LOGIC;
            RGB : out  STD_LOGIC_VECTOR (2 downto 0));
