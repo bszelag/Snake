@@ -1,0 +1,13 @@
+[Inputs]
+CLK
+CLR
+=RGB[2:0]=
+[Outputs]
+R
+G
+B
+HS
+VS
+=X[9:0]=
+=Y[9:0]=
+[BiDir]

@@ -65,9 +65,7 @@ begin
 --wait until Clock = '1';
 	if CLR = '1' then
 		hor <= 0;
-		 ver <= 0;
---		HS <= '1';
---		VS <= '1';
+		ver <= 0;
 	elsif rising_edge(Clock) then
   -- inkrementowanie liczników
       if  hor < 799  then --800
