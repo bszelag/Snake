@@ -49,8 +49,10 @@ ARCHITECTURE behavior OF VGA_640x480_tb IS
          B : OUT  std_logic;
          HS : OUT  std_logic;
          VS : OUT  std_logic;
-         X : OUT  std_logic_vector(9 downto 0);
-         Y : OUT  std_logic_vector(9 downto 0)
+			pixelX : OUT  std_logic_vector(9 downto 0);
+			pixelY : OUT  std_logic_vector(9 downto 0);
+         X : OUT  std_logic_vector(5 downto 0);
+         Y : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
     
@@ -66,8 +68,10 @@ ARCHITECTURE behavior OF VGA_640x480_tb IS
    signal B : std_logic;
    signal HS : std_logic;
    signal VS : std_logic;
-   signal X : std_logic_vector(9 downto 0);
-   signal Y : std_logic_vector(9 downto 0);
+   signal X : std_logic_vector(5 downto 0);
+   signal Y : std_logic_vector(5 downto 0);
+	signal pixelX : std_logic_vector(9 downto 0);
+	signal pixelY : std_logic_vector(9 downto 0);
 
    -- Clock period definitions
    constant CLK_period : time := 20 ns;
@@ -84,6 +88,8 @@ BEGIN
           B => B,
           HS => HS,
           VS => VS,
+			 pixelY => pixelY,
+			 pixelX => pixelX,
           X => X,
           Y => Y
         );

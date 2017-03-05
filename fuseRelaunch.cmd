@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/kbdDecoder_tb_isim_beh.exe" -prj "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/kbdDecoder_tb_beh.prj" "work.kbdDecoder_tb" 
+-intstyle "ise" -incremental -o "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480_tb_isim_beh.exe" -prj "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480_tb_beh.prj" "work.VGA_640x480_tb" 

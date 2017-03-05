@@ -1,0 +1,10 @@
+Command line:
+   VGA_640x480_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  18839
+
+Sun Mar 05 20:59:38 2017
+
+
+ Elaboration Time: 0.046875 sec
