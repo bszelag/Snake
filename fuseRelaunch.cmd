@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/timer_tb_isim_beh.exe" -prj "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/timer_tb_beh.prj" "work.timer_tb" 
+-intstyle "ise" -incremental -o "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/kbdDecoder_tb_isim_beh.exe" -prj "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/kbdDecoder_tb_beh.prj" "work.kbdDecoder_tb" 
