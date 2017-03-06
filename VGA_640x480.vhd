@@ -52,6 +52,44 @@ signal hor : Integer range 0 to 1023;
 signal fieldX : integer range 0 to 63;
 signal fieldY : integer range 0 to 63;
 
+
+
+--definicja tablicy do przechowywania znaków
+type signTable is array (0 to 9, 0 to 9) of STD_LOGIC;
+--definicja znaków
+constant letterP : signTable :=( ('0','0','0','0','0','0','0','0','0','0'),
+											('0','1','1','1','1','1','0','0','0','0'),
+											('0','1','1','0','0','0','1','1','0','0'),
+											('0','1','1','0','0','0','1','1','0','0'),
+											('0','1','1','0','0','0','1','1','0','0'),
+											('0','1','1','1','1','1','1','0','0','0'),
+											('0','1','1','0','0','0','0','0','0','0'),
+											('0','1','1','0','0','0','0','0','0','0'),
+											('0','0','0','0','0','0','0','0','0','0'),
+											('0','0','0','0','0','0','0','0','0','0'));
+											
+--constant letterL : signTable :=
+--constant letterE : signTable :=
+--constant letterY : signTable :=
+--constant letterR : signTable :=
+--constant letterA : signTable :=
+--constant letterB : signTable :=
+--
+--constant colon : signTable :=
+--
+--constant number0 : signTable :=
+--constant number1 : signTable :=
+--constant number2 : signTable :=
+--constant number3 : signTable :=
+--constant number4 : signTable :=
+--constant number5 : signTable :=
+--constant number6 : signTable :=
+
+
+
+
+
+
 --proces odpowiedzialny za dzielenie zegara
 begin
 Cloc: process (CLK, CLR)
@@ -105,6 +143,12 @@ begin
            ver <= 0;
 		  end if;
       end if;
+		
+		--jezeli doszed³em do do³u ekranu, na którym ma byæ pasek, to nadpisujê sygna³, zanim ten siê zmieni
+			if ver > 470 then
+			fieldY <= 0;
+			fieldX <= 0;
+			end if;
 	end if;
 --	ver <= vertical;
 --	hor <= horizontal;
@@ -134,22 +178,60 @@ end process;
 
 -- proces, który nadaje wartosci x i y, oraz ustala kolor akt. plamki
 color: process(Clock, CLR)
+variable indexCol : integer range 0 to 10;
+variable indexRow : integer range 0 to 10;
+variable tempHigh : integer range 0 to 1024; -- pomaga okreslic, czy przesunelismy sie w dol na ekranie
 begin
 	if CLR = '1' then
       R <= '0';
       G <= '0';
       B <= '0';
+		tempHigh := 480;
 	elsif rising_edge(Clock) then
-  -- define H pulse
-      if  hor >= 144 and hor < 784 and ver >=31 and ver <511 then --490 492
-         X <= std_logic_vector(to_unsigned(fieldX,6));
-         Y <= std_logic_vector(to_unsigned(fieldY,6));
-         pixelX <= std_logic_vector(to_unsigned(hor-144,10));
-         pixelY <= std_logic_vector(to_unsigned(ver-31,10));
-         R <= RGB(0);
-         G <= RGB(1);
-         B <= RGB(2);
+      if  hor >= 144 and hor < 784 and ver >=31 and ver <511 then
+			if ver > 470 then --fragment ekranu do wyswietlania pkt i czasu
+			
+				if (ver >= 480 and ver <= 489) then --literki na tym samym poziomie
+				
+					if (hor >=154 and hor <= 163) then --w ró¿nym miejscu horyzontalnie najpierw P
+						R <= letterP(indexRow,indexCol);
+						G <= letterP(indexRow,indexCol);
+						B <= letterP(indexRow,indexCol);
+						indexCol := indexCol + 1;
+					--elsif ...
+					
+					if ver /= tempHigh then
+						tempHigh := ver;
+						indexRow := indexRow + 1;
+					end if;	
+					end if;
+				else
+					R <= '0';
+					G <= '0';
+					B <= '0';
+				end if;
+				
+				if indexCol = 10 then
+					indexCol := 0;
+				end if;
+				
+				if indexRow = 10 then
+					indexRow := 0;
+				end if;
+				
+			else --rysuj to co podesle engine
+				X <= std_logic_vector(to_unsigned(fieldX,6));
+				Y <= std_logic_vector(to_unsigned(fieldY,6));
+				pixelX <= std_logic_vector(to_unsigned(hor-144,10));
+				pixelY <= std_logic_vector(to_unsigned(ver-31,10));
+				R <= RGB(0);
+				G <= RGB(1);
+				B <= RGB(2);
+			end if;
+				pixelX <= std_logic_vector(to_unsigned(hor-144,10));
+				pixelY <= std_logic_vector(to_unsigned(ver-31,10));
       else
+			tempHigh := 480;
          X <= "000000";
          Y <= "000000";
          R <= '0';

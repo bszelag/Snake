@@ -47,51 +47,62 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1488742355" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1488742355">
+    <transform xil_pn:end_ts="1488824787" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1488824787">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1488743967" xil_pn:in_ck="-4427910418195678549" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1488743967">
+    <transform xil_pn:end_ts="1488825000" xil_pn:in_ck="-4427910418195678549" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1488825000">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="VGA_640x480.vhd"/>
-      <outfile xil_pn:name="VGA_640x480_tb.vhd"/>
-      <outfile xil_pn:name="engine.vhd"/>
-      <outfile xil_pn:name="kbdDecoder.vhd"/>
-      <outfile xil_pn:name="kbdDecoder_tb.vhd"/>
-      <outfile xil_pn:name="timer.vhd"/>
-      <outfile xil_pn:name="timer_tb.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1488742355" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="9138719192674892886" xil_pn:start_ts="1488742355">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1488742356" xil_pn:in_ck="4774924126769" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8747708621630012456" xil_pn:start_ts="1488742355">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="main.vhf"/>
-    </transform>
-    <transform xil_pn:end_ts="1488742356" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8780884409608901338" xil_pn:start_ts="1488742356">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1488743969" xil_pn:in_ck="-4061654361748673886" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1488743969">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="VGA_640x480.vhd"/>
-      <outfile xil_pn:name="VGA_640x480_tb.vhd"/>
-      <outfile xil_pn:name="engine.vhd"/>
-      <outfile xil_pn:name="kbdDecoder.vhd"/>
-      <outfile xil_pn:name="kbdDecoder_tb.vhd"/>
-      <outfile xil_pn:name="main.vhf"/>
-      <outfile xil_pn:name="timer.vhd"/>
-      <outfile xil_pn:name="timer_tb.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1488743976" xil_pn:in_ck="-4061654361748673886" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5851136501520326350" xil_pn:start_ts="1488743969">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="VGA_640x480.vhd"/>
+      <outfile xil_pn:name="VGA_640x480_tb.vhd"/>
+      <outfile xil_pn:name="engine.vhd"/>
+      <outfile xil_pn:name="kbdDecoder.vhd"/>
+      <outfile xil_pn:name="kbdDecoder_tb.vhd"/>
+      <outfile xil_pn:name="timer.vhd"/>
+      <outfile xil_pn:name="timer_tb.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1488824787" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="9138719192674892886" xil_pn:start_ts="1488824787">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1488824789" xil_pn:in_ck="4774924126769" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8747708621630012456" xil_pn:start_ts="1488824787">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="main.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1488824789" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8780884409608901338" xil_pn:start_ts="1488824789">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1488825003" xil_pn:in_ck="-4061654361748673886" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1488825003">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="VGA_640x480.vhd"/>
+      <outfile xil_pn:name="VGA_640x480_tb.vhd"/>
+      <outfile xil_pn:name="engine.vhd"/>
+      <outfile xil_pn:name="kbdDecoder.vhd"/>
+      <outfile xil_pn:name="kbdDecoder_tb.vhd"/>
+      <outfile xil_pn:name="main.vhf"/>
+      <outfile xil_pn:name="timer.vhd"/>
+      <outfile xil_pn:name="timer_tb.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1488825007" xil_pn:in_ck="-4061654361748673886" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5851136501520326350" xil_pn:start_ts="1488825003">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="VGA_640x480_tb_beh.prj"/>
       <outfile xil_pn:name="VGA_640x480_tb_isim_beh.exe"/>
@@ -100,10 +111,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1488743976" xil_pn:in_ck="7854069843583889119" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3109457514755741605" xil_pn:start_ts="1488743976">
+    <transform xil_pn:end_ts="1488825007" xil_pn:in_ck="-7023515102225065969" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3109457514755741605" xil_pn:start_ts="1488825007">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
