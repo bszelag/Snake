@@ -26,5 +26,3 @@ at 230 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue dete
 at 250 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 at 270 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 at 290 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-# run all
-The simulator has terminated in an unexpected manner.  Please review the ISim log (isim.log) for details.

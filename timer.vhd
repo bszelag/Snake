@@ -33,7 +33,7 @@ entity timer is
     Port ( Start : in  STD_LOGIC;
            Clk : in  STD_LOGIC;
 			  Sec : out  STD_LOGIC_VECTOR (5 downto 0);
-			  Clk10Hz_Out : out STD_LOGIC;
+			  Clk16Hz_Out : out STD_LOGIC;
            Min : out  STD_LOGIC_VECTOR (5 downto 0));
 			  
 end timer;
@@ -43,25 +43,25 @@ architecture Behavioral of timer is
 
 signal divisior : unsigned(24 downto 0);
 signal divisior2 : unsigned(3 downto 0);
-signal Clock10Hz	 : STD_LOGIC := '0';
+signal Clock16Hz	 : STD_LOGIC := '0';
 signal Clock1Hz	 : STD_LOGIC := '0';
 
 
 begin
 
-cloc10Hz: process (Clk, Start)
+cloc16Hz: process (Clk, Start)
 begin
 
 	if Start = '1' then
 		
-		Clock10Hz <= '0';
+		Clock16Hz <= '0';
 		divisior <= (others => '0');
 		
 	elsif rising_edge(Clk) then
 	
-		if divisior = X"2625A0" then  --17D7840 to czas w hex po這wy okresu sygnalu 1Hz
+		if divisior = X"17D784" then  --17D7840 to czas w hex po這wy okresu sygnalu 1Hz
 			divisior   <= (others => '0');
-			Clock10Hz   <= not Clock10Hz;
+			Clock16Hz   <= not Clock16Hz;
 		else
 			divisior <= divisior + "1";
 		end if;
@@ -69,9 +69,9 @@ begin
 	end if;
 end process;
 
-	Clk10Hz_Out <= Clock10Hz;
+	Clk16Hz_Out <= Clock16Hz;
 
-cloc1Hz: process (Clock10Hz, Start)
+cloc1Hz: process (Clock16Hz, Start)
 begin
 
 	if Start = '1' then
@@ -79,9 +79,9 @@ begin
 		Clock1Hz <= '0';
 		divisior2 <= (others => '0');
 		
-	elsif rising_edge(Clock10Hz) then
+	elsif rising_edge(Clock16Hz) then
 	
-		if divisior2 = X"A" then  --17D7840 to czas w hex po這wy okresu sygnalu 1Hz
+		if divisior2 = X"8" then  --17D7840 to czas w hex po這wy okresu sygnalu 1Hz
 			divisior2   <= (others => '0');
 			Clock1Hz   <= not Clock1Hz;
 		else
