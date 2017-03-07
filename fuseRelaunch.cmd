@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480_tb_isim_beh.exe" -prj "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480_tb_beh.prj" "work.VGA_640x480_tb" 
+-intstyle "ise" -incremental -o "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/timer_tb_isim_beh.exe" -prj "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/timer_tb_beh.prj" "work.timer_tb" 

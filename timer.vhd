@@ -33,6 +33,7 @@ entity timer is
     Port ( Start : in  STD_LOGIC;
            Clk : in  STD_LOGIC;
 			  Sec : out  STD_LOGIC_VECTOR (5 downto 0);
+			  Clk10Hz_Out : out STD_LOGIC;
            Min : out  STD_LOGIC_VECTOR (5 downto 0));
 			  
 end timer;
@@ -41,24 +42,26 @@ architecture Behavioral of timer is
 
 
 signal divisior : unsigned(24 downto 0);
-signal Clock 	 : STD_LOGIC := '0';
+signal divisior2 : unsigned(3 downto 0);
+signal Clock10Hz	 : STD_LOGIC := '0';
+signal Clock1Hz	 : STD_LOGIC := '0';
 
 
 begin
 
-cloc: process (Clk, Start)
+cloc10Hz: process (Clk, Start)
 begin
 
 	if Start = '1' then
-	
-		Clock <= '0';
+		
+		Clock10Hz <= '0';
 		divisior <= (others => '0');
 		
 	elsif rising_edge(Clk) then
 	
-		if divisior = X"17D7840" then  --17D7840 to czas w hex po³owy okresu sygnalu 1Hz
+		if divisior = X"2625A0" then  --17D7840 to czas w hex po³owy okresu sygnalu 1Hz
 			divisior   <= (others => '0');
-			Clock   <= not Clock;
+			Clock10Hz   <= not Clock10Hz;
 		else
 			divisior <= divisior + "1";
 		end if;
@@ -66,14 +69,37 @@ begin
 	end if;
 end process;
 
-proc: process (Clock, Start)
+	Clk10Hz_Out <= Clock10Hz;
+
+cloc1Hz: process (Clock10Hz, Start)
+begin
+
+	if Start = '1' then
+	
+		Clock1Hz <= '0';
+		divisior2 <= (others => '0');
+		
+	elsif rising_edge(Clock10Hz) then
+	
+		if divisior2 = X"A" then  --17D7840 to czas w hex po³owy okresu sygnalu 1Hz
+			divisior2   <= (others => '0');
+			Clock1Hz   <= not Clock1Hz;
+		else
+			divisior2 <= divisior2 + "1";
+		end if;
+
+	end if;
+end process;
+
+
+proc: process (Clock1Hz, Start)
 variable seconds  : Integer range 0 to 60;
 variable minutes  : Integer range 0 to 60;
 begin
 	if Start = '1' then
 		seconds := 0;
 		minutes := 0;
-   elsif rising_edge(Clock) then
+   elsif rising_edge(Clock1Hz) then
 	
 		
 		seconds := seconds +1;

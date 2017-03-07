@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Mateusz\Desktop\SemestrVI\UCISKP\Snake\VGA_640x480_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480_tb_isim_beh.wdb 
+Running: C:\Users\Mateusz\Desktop\SemestrVI\UCISKP\Snake\timer_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/timer_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,5 +11,20 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 10 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 30 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 50 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 70 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 90 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 110 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 130 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 150 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 170 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 190 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 210 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 230 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 250 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 270 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+at 290 ns(1), Instance /timer_tb/uut/ : Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 # run all
 The simulator has terminated in an unexpected manner.  Please review the ISim log (isim.log) for details.

@@ -44,6 +44,7 @@ ARCHITECTURE behavior OF timer_tb IS
          Start : IN  std_logic;
          Clk : IN  std_logic;
          Sec : OUT  std_logic_vector(5 downto 0);
+			Clk10Hz_Out : OUT std_logic;
          Min : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
@@ -56,6 +57,7 @@ ARCHITECTURE behavior OF timer_tb IS
  	--Outputs
    signal Sec : std_logic_vector(5 downto 0);
    signal Min : std_logic_vector(5 downto 0);
+	signal Clk10Hz_Out :  std_logic;
 
    -- Clock period definitions
    constant Clk_period : time := 20 ns;
@@ -67,6 +69,7 @@ BEGIN
           Start => Start,
           Clk => Clk,
           Sec => Sec,
+			 Clk10Hz_Out => Clk10Hz_Out,
           Min => Min
         );
 

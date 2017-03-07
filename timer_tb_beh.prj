@@ -1,0 +1,2 @@
+vhdl work "timer.vhd"
+vhdl work "timer_tb.vhd"
