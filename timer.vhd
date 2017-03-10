@@ -104,7 +104,7 @@ begin
 		
 		seconds := seconds +1;
 		
-		if seconds = 60 then --przypisanie do jednego sygna³u powinno nastepowaæ tylko raz, st¹d dziwnie skonstruwany warunek (mo¿na te¿ u¿yæ zmiennych)
+		if seconds = 60 then 
 			seconds := 0;
 			minutes := minutes+1;
 		end if;

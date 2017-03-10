@@ -32,6 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity kbdDecoder is
     Port ( DI : in  STD_LOGIC_VECTOR (7 downto 0);
            E0 : in  STD_LOGIC;
+           Clk : in  STD_LOGIC;
            F0 : in  STD_LOGIC;
            DI_Rdy : in  STD_LOGIC;
            DO : out  STD_LOGIC_VECTOR (1 downto 0);-- PLAYERS: UP 00, LEFT 01, DOWN 10, RIGHT 11 | INSTRUCTIONS: RESET 00, START 01, SINGLE 10, MUL 11 
@@ -43,12 +44,11 @@ architecture Behavioral of kbdDecoder is
 
 begin
 
-proc: process(DI_Rdy)	
+proc: process(Clk)	
 	begin
-		DO_Rdy<='0'; --domyœlna akcja
-		if rising_edge(DI_Rdy) then
-		
-			if F0 = '0' then  --interesuje nas nacisniecie, a nie puszczenie
+		if rising_edge(Clk) then
+        DO_Rdy<='0'; --domyœlna akcja
+			if F0 = '0' and DI_Rdy = '1' then  --interesuje nas nacisniecie, a nie puszczenie
 				case DI is
 					--PLAYER A
 					when X"75" =>	-- UP/NUM8
@@ -104,7 +104,7 @@ proc: process(DI_Rdy)
 						DO <= "11";
 						DO_Rdy <= '1';
 					when OTHERS =>
-						null; -- no action
+						 null;
 				end case;
 			end if;
 		end if;

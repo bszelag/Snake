@@ -199,11 +199,7 @@ begin
 						B <= letterP(indexRow,indexCol);
 						indexCol := indexCol + 1;
 					--elsif ...
-					
-					if ver /= tempHigh then
-						tempHigh := ver;
-						indexRow := indexRow + 1;
-					end if;	
+
 					end if;
 				else
 					R <= '0';
@@ -211,6 +207,12 @@ begin
 					B <= '0';
 				end if;
 				
+            
+            if ver /= tempHigh then
+					tempHigh := ver;
+					indexRow := indexRow + 1;
+				end if;	
+            
 				if indexCol = 10 then
 					indexCol := 0;
 				end if;
@@ -218,6 +220,11 @@ begin
 				if indexRow = 10 then
 					indexRow := 0;
 				end if;
+            
+            if ver > 511 then
+              tempHigh := ver;
+             end if;
+               
 				
 			else --rysuj to co podesle engine
 				X <= std_logic_vector(to_unsigned(fieldX,6));
@@ -231,7 +238,6 @@ begin
 				pixelX <= std_logic_vector(to_unsigned(hor-144,10));
 				pixelY <= std_logic_vector(to_unsigned(ver-31,10));
       else
-			tempHigh := 480;
          X <= "000000";
          Y <= "000000";
          R <= '0';
