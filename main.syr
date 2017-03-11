@@ -1,0 +1,607 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.vhd" in Library work.
+Entity <vga_640x480> compiled.
+Entity <vga_640x480> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" in Library work.
+Entity <main> compiled.
+Entity <main> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <VGA_640x480> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 78: Unconnected output port 'X' of component 'VGA_640x480'.
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 78: Unconnected output port 'Y' of component 'VGA_640x480'.
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 78: Unconnected output port 'pixelX' of component 'VGA_640x480'.
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 78: Unconnected output port 'pixelY' of component 'VGA_640x480'.
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 96: Unconnected output port 'E0' of component 'PS2_Kbd'.
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 96: Unconnected output port 'F0' of component 'PS2_Kbd'.
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 96: Unconnected output port 'DO_Rdy' of component 'PS2_Kbd'.
+WARNING:Xst:753 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 96: Unconnected output port 'DO' of component 'PS2_Kbd'.
+WARNING:Xst:2211 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf" line 96: Instantiating black box module <PS2_Kbd>.
+Entity <main> analyzed. Unit <main> generated.
+
+Analyzing Entity <VGA_640x480> in library <work> (Architecture <behavioral>).
+Entity <VGA_640x480> analyzed. Unit <VGA_640x480> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <VGA_640x480>.
+    Related source file is "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.vhd".
+WARNING:Xst:647 - Input <PointsB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <points_10$mux0000> of Case statement line 553 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <points_10$mux0000> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <points_10$mux0000>.
+WARNING:Xst:643 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.vhd" line 664: The result of a 3x4-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.vhd" line 664: The result of a 3x4-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 10x170-bit ROM for signal <$rom0000>.
+    Found 10-bit register for signal <pixelX>.
+    Found 10-bit register for signal <pixelY>.
+    Found 1-bit register for signal <HS>.
+    Found 1-bit register for signal <B>.
+    Found 1-bit register for signal <G>.
+    Found 1-bit register for signal <R>.
+    Found 6-bit register for signal <X>.
+    Found 6-bit register for signal <Y>.
+    Found 1-bit register for signal <VS>.
+    Found 1-bit 10-to-1 multiplexer for signal <$mux0001> created at line 746.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0000> created at line 807.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0001> created at line 804.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0002> created at line 799.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0003> created at line 795.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0004> created at line 791.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0005> created at line 787.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0006> created at line 782.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0007> created at line 768.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0008> created at line 764.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0009> created at line 760.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0010> created at line 756.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0011> created at line 752.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0012> created at line 748.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0013> created at line 920.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0014> created at line 917.
+    Found 10-bit comparator greatequal for signal <B$cmp_ge0015> created at line 917.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0000> created at line 807.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0001> created at line 804.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0002> created at line 799.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0003> created at line 795.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0004> created at line 791.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0005> created at line 787.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0006> created at line 782.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0007> created at line 778.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0008> created at line 768.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0009> created at line 764.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0010> created at line 760.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0011> created at line 756.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0012> created at line 752.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0013> created at line 748.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0014> created at line 745.
+    Found 10-bit comparator lessequal for signal <B$cmp_le0015> created at line 920.
+    Found 10-bit comparator less for signal <B$cmp_lt0000> created at line 917.
+    Found 10-bit comparator less for signal <B$cmp_lt0001> created at line 917.
+    Found 1-bit register for signal <Clock>.
+    Found 6-bit register for signal <fieldX>.
+    Found 4-bit adder for signal <fieldX$add0000> created at line 849.
+    Found 6-bit adder for signal <fieldX$addsub0000> created at line 852.
+    Found 10-bit comparator greatequal for signal <fieldX$cmp_ge0000> created at line 848.
+    Found 10-bit comparator less for signal <fieldX$cmp_lt0000> created at line 848.
+    Found 10-bit comparator less for signal <fieldX$cmp_lt0001> created at line 847.
+    Found 6-bit up counter for signal <fieldY>.
+    Found 4-bit adder for signal <fieldY$add0000> created at line 862.
+    Found 10-bit comparator greater for signal <fieldY$cmp_gt0000> created at line 875.
+    Found 10-bit comparator less for signal <fieldY$cmp_lt0000> created at line 861.
+    Found 6-bit subtractor for signal <G0$addsub0000> created at line 664.
+    Found 6-bit subtractor for signal <G0$addsub0001> created at line 664.
+    Found 10-bit comparator greatequal for signal <G0$cmp_ge0000> created at line 455.
+    Found 10-bit comparator greatequal for signal <G0$cmp_ge0001> created at line 500.
+    Found 10-bit comparator greatequal for signal <G0$cmp_ge0002> created at line 548.
+    Found 10-bit comparator lessequal for signal <G0$cmp_le0000> created at line 455.
+    Found 10-bit comparator lessequal for signal <G0$cmp_le0001> created at line 500.
+    Found 10-bit comparator lessequal for signal <G0$cmp_le0002> created at line 548.
+    Found 10-bit comparator less for signal <G0$cmp_lt0000> created at line 672.
+    Found 10-bit comparator less for signal <G0$cmp_lt0001> created at line 672.
+    Found 10-bit up counter for signal <hor>.
+    Found 10-bit comparator less for signal <HS$cmp_lt0000> created at line 892.
+    Found 4x7-bit multiplier for signal <num1$mult0000> created at line 451.
+    Found 10-bit subtractor for signal <pixelX$sub0000> created at line 941.
+    Found 10-bit subtractor for signal <pixelY$sub0000> created at line 942.
+    Found 14-bit subtractor for signal <points_10$addsub0000> created at line 451.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0000> created at line 412.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0001> created at line 413.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0002> created at line 415.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0003> created at line 417.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0004> created at line 419.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0005> created at line 421.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0006> created at line 423.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0007> created at line 425.
+    Found 14-bit comparator less for signal <points_10$cmp_lt0008> created at line 427.
+    Found 4x10-bit multiplier for signal <points_10$mult0000> created at line 449.
+    Found 14-bit subtractor for signal <points_10$sub0000> created at line 449.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0000> created at line 386.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0001> created at line 387.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0002> created at line 389.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0003> created at line 391.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0004> created at line 393.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0005> created at line 395.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0006> created at line 397.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0007> created at line 399.
+    Found 14-bit comparator less for signal <points_100$cmp_lt0008> created at line 401.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0000> created at line 357.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0001> created at line 358.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0002> created at line 360.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0003> created at line 362.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0004> created at line 364.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0005> created at line 366.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0006> created at line 368.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0007> created at line 370.
+    Found 14-bit comparator less for signal <points_1000$cmp_lt0008> created at line 372.
+    Found 4-bit up counter for signal <tempX>.
+    Found 4-bit up counter for signal <tempY>.
+    Found 10-bit comparator greatequal for signal <tempY$cmp_ge0000> created at line 861.
+    Found 3x4-bit multiplier for signal <valTime$mult0001> created at line 664.
+    Found 3x4-bit multiplier for signal <valTime0$mult0001> created at line 664.
+    Found 6-bit comparator less for signal <valTime10$cmp_lt0000> created at line 412.
+    Found 6-bit comparator less for signal <valTime10$cmp_lt0001> created at line 413.
+    Found 6-bit comparator less for signal <valTime10$cmp_lt0002> created at line 415.
+    Found 6-bit comparator less for signal <valTime10$cmp_lt0003> created at line 417.
+    Found 6-bit comparator less for signal <valTime10$cmp_lt0004> created at line 419.
+    Found 6-bit comparator less for signal <valTime10$cmp_lt0005> created at line 421.
+    Found 6-bit comparator less for signal <valTime100$cmp_lt0000> created at line 412.
+    Found 6-bit comparator less for signal <valTime100$cmp_lt0001> created at line 413.
+    Found 6-bit comparator less for signal <valTime100$cmp_lt0002> created at line 415.
+    Found 6-bit comparator less for signal <valTime100$cmp_lt0003> created at line 417.
+    Found 6-bit comparator less for signal <valTime100$cmp_lt0004> created at line 419.
+    Found 6-bit comparator less for signal <valTime100$cmp_lt0005> created at line 421.
+    Found 10-bit up counter for signal <ver>.
+    Found 10-bit comparator less for signal <ver$cmp_lt0000> created at line 860.
+    Found 10-bit comparator less for signal <VS$cmp_lt0000> created at line 898.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   5 Counter(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred   4 Multiplier(s).
+	inferred  90 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <VGA_640x480> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf".
+WARNING:Xst:653 - Signal <XLXI_1_Sec_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 000000.
+WARNING:Xst:653 - Signal <XLXI_1_RGB_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 000.
+WARNING:Xst:653 - Signal <XLXI_1_PointsB_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000.
+WARNING:Xst:653 - Signal <XLXI_1_PointsA_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000.
+WARNING:Xst:653 - Signal <XLXI_1_Min_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 000000.
+WARNING:Xst:653 - Signal <XLXI_1_CLR_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <XLXI_1_CLK_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 10x170-bit ROM                                        : 1
+# Multipliers                                          : 4
+ 3x4-bit multiplier                                    : 2
+ 4x10-bit multiplier                                   : 1
+ 4x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 9
+ 10-bit subtractor                                     : 2
+ 14-bit subtractor                                     : 2
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 2
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 1
+# Registers                                            : 11
+ 1-bit register                                        : 6
+ 10-bit register                                       : 2
+ 6-bit register                                        : 3
+# Comparators                                          : 90
+ 10-bit comparator greatequal                          : 21
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 10
+ 10-bit comparator lessequal                           : 19
+ 14-bit comparator less                                : 27
+ 6-bit comparator less                                 : 12
+# Multiplexers                                         : 1
+ 1-bit 10-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <PS2_Kbd.ngc>.
+Loading core <PS2_Kbd> for timing and area information for instance <XLXI_2>.
+WARNING:Xst:1710 - FF/Latch <Clock> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HS> (without init value) has a constant value of 1 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <B> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <G> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <VS> (without init value) has a constant value of 1 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R> (without init value) has a constant value of 0 in block <XLXI_1>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 10x170-bit ROM                                        : 1
+# Multipliers                                          : 4
+ 3x4-bit multiplier                                    : 2
+ 4x10-bit multiplier                                   : 1
+ 4x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 9
+ 10-bit subtractor                                     : 2
+ 14-bit subtractor                                     : 2
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 1
+ 6-bit subtractor                                      : 2
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 1
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+# Comparators                                          : 90
+ 10-bit comparator greatequal                          : 21
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 10
+ 10-bit comparator lessequal                           : 19
+ 14-bit comparator less                                : 27
+ 6-bit comparator less                                 : 12
+# Multiplexers                                         : 1
+ 1-bit 10-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Clock> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <VS> (without init value) has a constant value of 1 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_0> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_1> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_2> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_3> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_4> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_5> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_6> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_7> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_8> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelX_9> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_0> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_1> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_2> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_3> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_4> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_5> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_6> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_7> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_8> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixelY_9> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fieldX_0> has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fieldX_1> has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fieldX_2> has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fieldX_3> has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fieldX_4> has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <fieldX_5> has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <HS> (without init value) has a constant value of 1 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <B> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <G> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <R> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_0> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_1> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_2> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_3> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_4> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_5> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_0> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_1> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_2> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_3> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_4> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_5> (without init value) has a constant value of 0 in block <VGA_640x480>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 8
+
+Cell Usage :
+# BELS                             : 59
+#      GND                         : 2
+#      INV                         : 4
+#      LUT1                        : 7
+#      LUT2                        : 10
+#      LUT3                        : 7
+#      LUT4                        : 8
+#      LUT4_D                      : 1
+#      LUT4_L                      : 3
+#      MUXCY                       : 7
+#      VCC                         : 2
+#      XORCY                       : 8
+# FlipFlops/Latches                : 37
+#      FD                          : 11
+#      FDE                         : 16
+#      FDR                         : 1
+#      FDRE                        : 9
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      IBUF                        : 2
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       25  out of   4656     0%  
+ Number of Slice Flip Flops:             37  out of   9312     0%  
+ Number of 4 input LUTs:                 40  out of   9312     0%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50MHz                          | BUFGP                  | 37    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.034ns (Maximum Frequency: 165.728MHz)
+   Minimum input arrival time before clock: 3.980ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_50MHz'
+  Clock period: 6.034ns (frequency: 165.728MHz)
+  Total number of paths / destination ports: 298 / 70
+-------------------------------------------------------------------------
+Delay:               6.034ns (Levels of Logic = 3)
+  Source:            XLXI_2/cnt8b_4 (FF)
+  Destination:       XLXI_2/cntMod11_0 (FF)
+  Source Clock:      Clk_50MHz rising
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: XLXI_2/cnt8b_4 to XLXI_2/cntMod11_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.622  cnt8b_4 (cnt8b<4>)
+     LUT4:I0->O            1   0.704   0.499  PS_Samp_cmp_eq00009 (PS_Samp_cmp_eq00009)
+     LUT2:I1->O            7   0.704   0.712  PS_Samp_cmp_eq000010 (PS_Samp)
+     LUT4:I3->O            4   0.704   0.587  cntMod11_or000016 (cntMod11_or0000)
+     FDRE:R                    0.911          cntMod11_0
+    ----------------------------------------
+    Total                      6.034ns (3.614ns logic, 2.420ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.980ns (Levels of Logic = 4)
+  Source:            PS2_Data (PAD)
+  Destination:       XLXI_2/ByteRdy (FF)
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: PS2_Data to XLXI_2/ByteRdy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  PS2_Data_IBUF (PS2_Data_IBUF)
+     begin scope: 'XLXI_2'
+     LUT2:I0->O            1   0.704   0.424  ByteRdy_and0000_SW0_SW0 (N6)
+     LUT4:I3->O            1   0.704   0.000  ByteRdy_and0000 (ByteRdy_and0000)
+     FDR:D                     0.308          ByteRdy
+    ----------------------------------------
+    Total                      3.980ns (2.934ns logic, 1.046ns route)
+                                       (73.7% logic, 26.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.77 secs
+ 
+--> 
+
+Total memory usage is 267580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

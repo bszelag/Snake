@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : main.vhf
--- /___/   /\     Timestamp : 03/04/2017 23:15:27
+-- /___/   /\     Timestamp : 03/11/2017 16:39:45
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -37,20 +37,30 @@ entity main is
 end main;
 
 architecture BEHAVIORAL of main is
-   signal XLXI_1_CLK_openSignal : std_logic;
-   signal XLXI_1_CLR_openSignal : std_logic;
-   signal XLXI_1_RGB_openSignal : std_logic_vector (2 downto 0);
+   signal XLXI_1_CLK_openSignal     : std_logic;
+   signal XLXI_1_CLR_openSignal     : std_logic;
+   signal XLXI_1_Min_openSignal     : std_logic_vector (5 downto 0);
+   signal XLXI_1_PointsA_openSignal : std_logic_vector (13 downto 0);
+   signal XLXI_1_PointsB_openSignal : std_logic_vector (13 downto 0);
+   signal XLXI_1_RGB_openSignal     : std_logic_vector (2 downto 0);
+   signal XLXI_1_Sec_openSignal     : std_logic_vector (5 downto 0);
    component VGA_640x480
-      port ( CLK : in    std_logic; 
-             CLR : in    std_logic; 
-             RGB : in    std_logic_vector (2 downto 0); 
-             R   : out   std_logic; 
-             G   : out   std_logic; 
-             B   : out   std_logic; 
-             HS  : out   std_logic; 
-             VS  : out   std_logic; 
-             X   : out   std_logic_vector (9 downto 0); 
-             Y   : out   std_logic_vector (9 downto 0));
+      port ( CLK     : in    std_logic; 
+             CLR     : in    std_logic; 
+             RGB     : in    std_logic_vector (2 downto 0); 
+             PointsA : in    std_logic_vector (13 downto 0); 
+             PointsB : in    std_logic_vector (13 downto 0); 
+             Sec     : in    std_logic_vector (5 downto 0); 
+             Min     : in    std_logic_vector (5 downto 0); 
+             R       : out   std_logic; 
+             G       : out   std_logic; 
+             B       : out   std_logic; 
+             HS      : out   std_logic; 
+             VS      : out   std_logic; 
+             X       : out   std_logic_vector (5 downto 0); 
+             Y       : out   std_logic_vector (5 downto 0); 
+             pixelX  : out   std_logic_vector (9 downto 0); 
+             pixelY  : out   std_logic_vector (9 downto 0));
    end component;
    
    component PS2_Kbd
@@ -68,10 +78,16 @@ begin
    XLXI_1 : VGA_640x480
       port map (CLK=>XLXI_1_CLK_openSignal,
                 CLR=>XLXI_1_CLR_openSignal,
+                Min(5 downto 0)=>XLXI_1_Min_openSignal(5 downto 0),
+                PointsA(13 downto 0)=>XLXI_1_PointsA_openSignal(13 downto 0),
+                PointsB(13 downto 0)=>XLXI_1_PointsB_openSignal(13 downto 0),
                 RGB(2 downto 0)=>XLXI_1_RGB_openSignal(2 downto 0),
+                Sec(5 downto 0)=>XLXI_1_Sec_openSignal(5 downto 0),
                 B=>VGA_B,
                 G=>VGA_G,
                 HS=>VGA_HS,
+                pixelX=>open,
+                pixelY=>open,
                 R=>VGA_R,
                 VS=>VGA_VS,
                 X=>open,

@@ -1,2 +1,24 @@
 vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 
+vhdtdtfi -lib work VGA_640x480.vhd -prj Snake -o VGA_640x480.spl -module VGA_640x480 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA_640x480.spl C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.sym 

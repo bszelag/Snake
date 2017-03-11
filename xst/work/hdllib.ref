@@ -1,0 +1,4 @@
+AR vga_640x480 behavioral C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.vhd sub00/vhpl01 1489246789
+AR main behavioral C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf sub00/vhpl03 1489246791
+EN vga_640x480 NULL C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/VGA_640x480.vhd sub00/vhpl00 1489246788
+EN main NULL C:/Users/Mateusz/Desktop/SemestrVI/UCISKP/Snake/main.vhf sub00/vhpl02 1489246790

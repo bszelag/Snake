@@ -14,7 +14,6 @@
         <signal name="PS2_Clk" />
         <signal name="PS2_Data" />
         <signal name="Clk_50MHz" />
-        <signal name="XLXN_4" />
         <port polarity="Output" name="VGA_R" />
         <port polarity="Output" name="VGA_G" />
         <port polarity="Output" name="VGA_B" />
@@ -24,8 +23,19 @@
         <port polarity="Input" name="PS2_Data" />
         <port polarity="Input" name="Clk_50MHz" />
         <blockdef name="VGA_640x480">
-            <timestamp>2017-3-4T15:15:44</timestamp>
-            <rect width="256" x="64" y="-448" height="448" />
+            <timestamp>2017-3-11T15:39:28</timestamp>
+            <rect width="64" x="0" y="20" height="24" />
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <rect width="64" x="0" y="84" height="24" />
+            <line x2="0" y1="96" y2="96" x1="64" />
+            <rect width="64" x="0" y="148" height="24" />
+            <line x2="0" y1="160" y2="160" x1="64" />
+            <rect width="64" x="0" y="212" height="24" />
+            <line x2="0" y1="224" y2="224" x1="64" />
+            <rect width="64" x="320" y="20" height="24" />
+            <line x2="384" y1="32" y2="32" x1="320" />
+            <rect width="64" x="320" y="84" height="24" />
+            <line x2="384" y1="96" y2="96" x1="320" />
             <line x2="0" y1="-416" y2="-416" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
@@ -39,6 +49,7 @@
             <line x2="384" y1="-96" y2="-96" x1="320" />
             <rect width="64" x="320" y="-44" height="24" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
+            <rect width="256" x="64" y="-448" height="704" />
         </blockdef>
         <blockdef name="PS2_Kbd">
             <timestamp>2008-9-19T9:9:35</timestamp>
@@ -57,13 +68,19 @@
             <blockpin name="CLK" />
             <blockpin name="CLR" />
             <blockpin name="RGB(2:0)" />
+            <blockpin name="PointsA(13:0)" />
+            <blockpin name="PointsB(13:0)" />
+            <blockpin name="Sec(5:0)" />
+            <blockpin name="Min(5:0)" />
             <blockpin signalname="VGA_R" name="R" />
             <blockpin signalname="VGA_G" name="G" />
             <blockpin signalname="VGA_B" name="B" />
             <blockpin signalname="VGA_HS" name="HS" />
             <blockpin signalname="VGA_VS" name="VS" />
-            <blockpin name="X(9:0)" />
-            <blockpin name="Y(9:0)" />
+            <blockpin name="X(5:0)" />
+            <blockpin name="Y(5:0)" />
+            <blockpin name="pixelX(9:0)" />
+            <blockpin name="pixelY(9:0)" />
         </block>
         <block symbolname="PS2_Kbd" name="XLXI_2">
             <blockpin signalname="PS2_Clk" name="PS2_Clk" />
