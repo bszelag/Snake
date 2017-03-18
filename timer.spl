@@ -1,0 +1,8 @@
+[Inputs]
+Start
+Clk
+[Outputs]
+Clk16Hz_Out
+=Sec[5:0]=
+=Min[5:0]=
+[BiDir]

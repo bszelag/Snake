@@ -1,0 +1,11 @@
+[Inputs]
+E0
+Clk
+F0
+DI_Rdy
+=DI[7:0]=
+[Outputs]
+DO_Rdy
+=DO[1:0]=
+=D_Type[1:0]=
+[BiDir]

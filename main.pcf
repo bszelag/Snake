@@ -1,4 +1,17 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Mar 11 16:39:58 2017
+// Written by: Map P.20131013 on Fri Mar 17 13:44:55 2017
 //! **************************************************************************
+
+SCHEMATIC START;
+COMP "Clr" LOCATE = SITE "K17" LEVEL 1;
+COMP "VGA_B" LOCATE = SITE "G15" LEVEL 1;
+COMP "VGA_G" LOCATE = SITE "H15" LEVEL 1;
+COMP "VGA_R" LOCATE = SITE "H14" LEVEL 1;
+COMP "Clk_50MHz" LOCATE = SITE "C9" LEVEL 1;
+COMP "VGA_HS" LOCATE = SITE "F15" LEVEL 1;
+COMP "VGA_VS" LOCATE = SITE "F14" LEVEL 1;
+NET "Clk_50MHz_BUFGP/IBUFG" BEL "Clk_50MHz_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;
 

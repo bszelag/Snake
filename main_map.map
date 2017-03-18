@@ -9,19 +9,25 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sat Mar 11 16:39:58 2017
+Mapped Date    : Fri Mar 17 13:44:53 2017
 
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
 Mapping design into LUTs...
-WARNING:MapLib:701 - Signal PS2_Clk connected to top level port PS2_Clk has been
-   removed.
-WARNING:MapLib:701 - Signal PS2_Data connected to top level port PS2_Data has
-   been removed.
-WARNING:MapLib:701 - Signal Clk_50MHz connected to top level port Clk_50MHz has
-   been removed.
-WARNING:MapLib:39 - The timing specification "PERIOD=20000 pS HIGH 50%" on net
-   "Clk_50MHz" has been discarded, because the net was optimized out of the
-   design.
 Running directed packing...
+WARNING:Pack:266 - The function generator XLXI_1/B_mux00001311 failed to merge
+   with F5 multiplexer XLXI_1/B_mux0000111556_SW2.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/B_and001121 failed to merge
+   with F5 multiplexer XLXI_1/B_mux0000263_SW1.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/B_and00171 failed to merge with
+   F5 multiplexer XLXI_1/B_mux0000469_SW1.  There is a conflict for the FXMUX. 
+   The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
@@ -31,17 +37,31 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    4
+Number of warnings:    3
 Logic Utilization:
+  Number of Slice Flip Flops:           121 out of   9,312    1%
+  Number of 4 input LUTs:               951 out of   9,312   10%
 Logic Distribution:
-    Number of Slices containing only related logic:       0 out of       0   0%
-    Number of Slices containing unrelated logic:          0 out of       0   0%
+  Number of occupied Slices:            533 out of   4,656   11%
+    Number of Slices containing only related logic:     533 out of     533 100%
+    Number of Slices containing unrelated logic:          0 out of     533   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Number of bonded IOBs:                  5 out of     232    2%
+  Total Number of 4 input LUTs:         999 out of   9,312   10%
+    Number used as logic:               951
+    Number used as a route-thru:         48
 
-Peak Memory Usage:  245 MB
-Total REAL time to MAP completion:  1 secs 
-Total CPU time to MAP completion:   1 secs 
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                  7 out of     232    3%
+  Number of BUFGMUXs:                     3 out of      24   12%
+  Number of MULT18X18SIOs:                2 out of      20   10%
+
+Average Fanout of Non-Clock Nets:                3.64
+
+Peak Memory Usage:  222 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 

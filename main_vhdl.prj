@@ -1,2 +1,4 @@
-vhdl work "C:\Users\Mateusz\Desktop\SemestrVI\UCISKP\Snake\VGA_640x480.vhd"
-vhdl work "C:\Users\Mateusz\Desktop\SemestrVI\UCISKP\Snake\main.vhf"
+vhdl work "C:\Users\lab\Desktop\Snake\Snake\VGA_640x480.vhd"
+vhdl work "C:\Users\lab\Desktop\Snake\Snake\timer.vhd"
+vhdl work "C:\Users\lab\Desktop\Snake\Snake\engine.vhd"
+vhdl work "C:\Users\lab\Desktop\Snake\Snake\main.vhf"

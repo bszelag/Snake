@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="VGA_640x480">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-3-11T15:39:28</timestamp>
+    <timestamp>2017-3-17T12:44:17</timestamp>
     <pin polarity="Input" x="0" y="-416" name="CLK" />
     <pin polarity="Input" x="0" y="-224" name="CLR" />
     <pin polarity="Input" x="0" y="-32" name="RGB(2:0)" />

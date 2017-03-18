@@ -1,0 +1,26 @@
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template D:/PlikiProgramow/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/Ja/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
+vhdtdtfi -lib work engine.vhd -prj Snake -o engine.spl -module engine -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e engine.spl C:/Users/lab/Desktop/Snake/Snake/engine.sym 
