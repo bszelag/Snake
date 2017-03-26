@@ -1,4 +1,5 @@
 vhdl work "VGA_640x480.vhd"
 vhdl work "timer.vhd"
+vhdl work "kbdDecoder.vhd"
 vhdl work "engine.vhd"
 vhdl work "main.vhf"

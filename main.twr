@@ -2,8 +2,9 @@
 Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
-3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf GenIO.ucf
+D:\PlikiProgramow\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle
+ise -v 3 -s 4 -n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf -ucf
+GenIO.ucf
 
 Design file:              main.ncd
 Physical constraint file: main.pcf
@@ -603,14 +604,14 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Fri Mar 17 13:45:13 2017 
+Analysis completed Sat Mar 18 22:19:57 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 126 MB
+Peak Memory Usage: 141 MB
 
 
 

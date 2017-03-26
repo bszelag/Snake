@@ -5,16 +5,31 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">XLXI_16/E0</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">2</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">XLXI_16/F0,
+XLXI_16/DO_Rdy</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
 <msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
 <msg type="info" file="MapLib" num="159" delta="old" >Net Timing constraints on signal <arg fmt="%s" index="1">Clk_50MHz</arg> are pushed forward through input buffer.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">XLXI_1/B_mux00001311</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_1/B_mux0000111556_SW2</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">PS2_Clk</arg> connected to top level port <arg fmt="%s" index="2">PS2_Clk</arg> has been removed.
 </msg>
 
-<msg type="warning" file="Pack" num="266" delta="new" >The function generator <arg fmt="%s" index="1">XLXI_1/B_and001121</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_1/B_mux0000263_SW1</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">PS2_Data</arg> connected to top level port <arg fmt="%s" index="2">PS2_Data</arg> has been removed.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_1/B_mux00001311</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_1/B_mux0000111556_SW2</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
+</msg>
+
+<msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_1/B_and001121</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_1/B_mux0000263_SW1</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.
 </msg>
 
 <msg type="warning" file="Pack" num="266" delta="old" >The function generator <arg fmt="%s" index="1">XLXI_1/B_and00171</arg> failed to merge with F5 multiplexer <arg fmt="%s" index="2">XLXI_1/B_mux0000469_SW1</arg>.  <arg fmt="%z" index="3">There is a conflict for the FXMUX.</arg>  The design will exhibit suboptimal timing.

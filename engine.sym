@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="engine">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2017-3-17T12:38:33</timestamp>
+    <timestamp>2017-3-18T21:19:3</timestamp>
     <pin polarity="Input" x="0" y="-480" name="Clk" />
+    <pin polarity="Input" x="0" y="32" name="Clk_50" />
     <pin polarity="Input" x="0" y="-416" name="DI_Rdy" />
     <pin polarity="Input" x="0" y="-352" name="DI(1:0)" />
     <pin polarity="Input" x="0" y="-288" name="D_Type(1:0)" />
@@ -17,6 +18,7 @@
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="224" y="-520" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin Clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="32" type="pin Clk_50" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin DI_Rdy" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin DI(1:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin D_Type(1:0)" />
@@ -28,7 +30,7 @@
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-336" type="pin RGB(2:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-192" type="pin outPointsA(13:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="376" y="-48" type="pin outPointsB(13:0)" />
-        <rect width="320" x="64" y="-512" height="512" />
+        <line x2="0" y1="32" y2="32" x1="64" />
         <line x2="0" y1="-480" y2="-480" x1="64" />
         <line x2="0" y1="-416" y2="-416" x1="64" />
         <rect width="64" x="0" y="-364" height="24" />
@@ -50,5 +52,6 @@
         <line x2="448" y1="-192" y2="-192" x1="384" />
         <rect width="64" x="384" y="-60" height="24" />
         <line x2="448" y1="-48" y2="-48" x1="384" />
+        <rect width="320" x="64" y="-512" height="576" />
     </graph>
 </symbol>
