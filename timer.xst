@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Ja/Desktop/Snake/Snake/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Ja/Desktop/Snake/Snake/xst"
+elaborate
+-ifn timer.prj
+-ifmt mixed

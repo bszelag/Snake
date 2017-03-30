@@ -17,9 +17,8 @@ Total CPU time to Xst completion: 0.09 secs
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Ja/Desktop/Snake/Snake/engine.vhd" in Library work.
-Entity <engine> compiled.
-ERROR:HDLParsers:808 - "C:/Users/Ja/Desktop/Snake/Snake/engine.vhd" Line 357. - can not have such operands in this context.
+Compiling vhdl file "C:/Users/Ja/Desktop/Snake/Snake/timer.vhd" in Library work.
+Architecture behavioral of Entity timer is up to date.
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -27,9 +26,9 @@ Total CPU time to Xst completion: 0.14 secs
  
 --> 
 
-Total memory usage is 232888 kilobytes
+Total memory usage is 232376 kilobytes
 
-Number of errors   :    1 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

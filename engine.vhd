@@ -66,7 +66,7 @@ signal decB : STD_LOGIC;
 signal mode : STD_LOGIC_VECTOR(1 downto 0) := "01"; -- 00 - wybor trybu, 01 - player 1, 10 - multiplayer
 
 signal divider : unsigned(3 downto 0) := "1000";
-type boardArray is array (0 to 63, 0 to 43) of STD_LOGIC_VECTOR(12 downto 0);
+type boardArray is array (0 to 63, 0 to 43) of unsigned(12 downto 0);
 signal board : boardArray;
 
 begin
@@ -327,7 +327,7 @@ begin
 					if  nextMoveB = "0000000000000" then -- Puste pole							
 						decB <= '1';
 						board(to_integer(unsigned(headB_X)+1),to_integer(unsigned(headB_Y))) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
+							<= lenB + "1";
 					elsif nextMoveB = "1111111111111" then -- Jedzenie							
 						decB <= '0';
 						board(to_integer(unsigned(headB_X)+1),to_integer(unsigned(headB_Y))) 
@@ -347,47 +347,30 @@ end process;
 
 ---------------------------------------------------------------------------------------------------- Dekrementacja tablicy - "ruch" wê¿y
 decrementation : process(Clk_50)
-variable iA : integer range 0 to 44;
-variable jA : integer range 0 to 64;
-variable iB : integer range 0 to 44;
-variable jB : integer range 0 to 64;
-variable act_posA : STD_LOGIC_VECTOR(12 downto 0);
-variable act_posB : STD_LOGIC_VECTOR(12 downto 0);
+variable i : integer range 0 to 44;
+variable j : integer range 0 to 64;
+variable act_pos : unsigned(12 downto 0);--STD_LOGIC_VECTOR(12 downto 0);
 begin
-	if rising_edge(Clk_50) then 
-		if decA = '1' then
-			act_posA := board(iA,jA);
-			if ((act_posA > "0000000000000") AND (act_posA < "1111111111111") AND ((act_posA AND "1000000000000") = "0000000000000")) then
-				board(iA,jA) <= std_logic_vector(to_unsigned(to_integer(unsigned(act_posA)) - 1, 13));
-			end if;
-			if iA = 43 then
-				iA := 0;
-				if jA = 63 then
-					jA := 0;
+	if (rising_edge(Clk_50) AND (decA='1' OR decB='1')) then 
+		act_pos := board(i,j);
+		if ((act_pos > "0000000000000") AND (act_pos < "1111111111111") AND ((act_pos AND "1000000000000") = "0000000000000") AND decA='1') then
+			board(i,j) <= act_pos - "1";
+		end if;
+		if ((act_pos > "0000000000000") AND (act_pos < "1111111111111") AND ((act_pos AND "1000000000000") = "1000000000000") AND decB='1') then
+			board(i,j) <=  act_pos - "1";--std_logic_vector(to_unsigned(to_integer(unsigned(act_pos)) - 1, 13));
+			
+		end if;
+		if i = 43 then
+				i := 0;
+				if j = 63 then
+					j := 0;
 					decA <= '0';
-				else
-					jA := jA + 1;
-				end if;
-			else
-				iA := iA + 1;
-			end if;
-		end if;		
-		if decB = '1' then
-			act_posB := board(iB,jB);
-			if ((act_posB > "0000000000000") AND (act_posB < "1111111111111") AND ((act_posB AND "1000000000000") = "1000000000000")) then
-				board(iB,jB) <= std_logic_vector(to_unsigned(to_integer(unsigned(act_posB)) - 1, 13));
-			end if;
-			if iB = 43 then
-				iB := 0;
-				if jB = 63 then
-					jB := 0;
 					decB <= '0';
 				else
-					jB := jB + 1;
+					j := j + 1;
 				end if;
-			else
-				iB := iB + 1;
-			end if;
+		else
+			i := i + 1;
 		end if;
 	end if;
 end process;
