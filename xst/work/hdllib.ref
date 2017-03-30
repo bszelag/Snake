@@ -6,5 +6,5 @@ EN vga_640x480 NULL C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd sub00/vhpl00
 EN main NULL C:/Users/Ja/Desktop/Snake/Snake/main.vhf sub00/vhpl02 1489871968
 AR engine behavioral C:/Users/Ja/Desktop/Snake/Snake/engine.vhd sub00/vhpl07 1490896392
 AR kbddecoder behavioral C:/Users/Ja/Desktop/Snake/Snake/kbdDecoder.vhd sub00/vhpl09 1489871967
-AR timer behavioral C:/Users/Ja/Desktop/Snake/Snake/timer.vhd sub00/vhpl05 1490900055
-EN timer NULL C:/Users/Ja/Desktop/Snake/Snake/timer.vhd sub00/vhpl04 1490900054
+AR timer behavioral C:/Users/Ja/Desktop/Snake/Snake/timer.vhd sub00/vhpl05 1490900493
+EN timer NULL C:/Users/Ja/Desktop/Snake/Snake/timer.vhd sub00/vhpl04 1490900492

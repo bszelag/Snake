@@ -17,10 +17,10 @@ AR work/main/BEHAVIORAL 1489871969 \
       FL C:/Users/Ja/Desktop/Snake/Snake/main.vhf EN work/main 1489871968 \
       CP VGA_640x480 CP timer CP engine CP PS2_Kbd CP kbdDecoder
 FL C:/Users/Ja/Desktop/Snake/Snake/timer.vhd 2017/03/16.22:33:56 P.20131013
-EN work/timer 1490900054 FL C:/Users/Ja/Desktop/Snake/Snake/timer.vhd \
+EN work/timer 1490900492 FL C:/Users/Ja/Desktop/Snake/Snake/timer.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/timer/Behavioral 1490900055 \
-      FL C:/Users/Ja/Desktop/Snake/Snake/timer.vhd EN work/timer 1490900054
+AR work/timer/Behavioral 1490900493 \
+      FL C:/Users/Ja/Desktop/Snake/Snake/timer.vhd EN work/timer 1490900492
 FL C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd 2017/03/17.14:43:48 P.20131013
 EN work/VGA_640x480 1490531083 FL C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181

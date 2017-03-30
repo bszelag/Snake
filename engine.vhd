@@ -55,10 +55,10 @@ constant playerBColor : STD_LOGIC_VECTOR(2 downto 0) := "001";
 signal directionA : STD_LOGIC_VECTOR(1 downto 0) := "00";
 signal directionB : STD_LOGIC_VECTOR(1 downto 0) := "00";
 
-signal headA_X : STD_LOGIC_VECTOR(6 downto 0);
-signal headA_Y : STD_LOGIC_VECTOR(6 downto 0);
-signal headB_X : STD_LOGIC_VECTOR(6 downto 0);
-signal headB_Y : STD_LOGIC_VECTOR(6 downto 0);
+signal headA_X : unsigned(6 downto 0);
+signal headA_Y : unsigned(6 downto 0);
+signal headB_X : unsigned(6 downto 0);
+signal headB_Y : unsigned(6 downto 0);
 
 signal decA : STD_LOGIC;
 signal decB : STD_LOGIC;
@@ -169,25 +169,25 @@ end process;
 game: process(Clk)
 variable lenA : integer range 0 to 44*64; -- lenA jest liczba, ktora okreœla glowê wê¿a A 
 variable lenB : integer range 0 to 44*64;
-variable nextMoveA : STD_LOGIC_VECTOR(12 downto 0);
-variable nextMoveB : STD_LOGIC_VECTOR(12 downto 0);
+variable nextMoveA : unsigned(12 downto 0);
+variable nextMoveB : unsigned(12 downto 0);
 
 begin
 	if rising_edge(Clk) then
 		case directionA is
 			when "00" => ------------------------------------------------------UP-A
-				if to_integer(unsigned(headA_Y)) = 0 then
+				if headA_Y = 0 then
 					-- GAME OVER
 				else
-					nextMoveA := board(to_integer(unsigned(headA_X)),to_integer(unsigned(headA_Y))-1);
+					nextMoveA := board(headA_X, headA_Y - "1");
 					if  nextMoveA = "0000000000000" then -- Puste pole							
 						decA <= '1';
-						board(to_integer(unsigned(headA_X)),to_integer(unsigned(headA_Y))-1) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X, headA_Y - "1") 
+							<= lenA + "1";
 					elsif nextMoveA = "1111111111111" then -- Jedzenie							
 						decA <= '0';
-						board(to_integer(unsigned(headA_X)),to_integer(unsigned(headA_Y))-1) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X, headA_Y - "1") 
+							<= lenA + "1";
 					elsif ( nextMoveA AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
 						-- GAME OVER
 						
@@ -197,18 +197,18 @@ begin
 					end if;
 				end if;
 			when "01" => ------------------------------------------------------LEFT-A
-				if to_integer(unsigned(headA_X)) = 0 then
+				if headA_X = 0 then
 					-- GAME OVER
 				else
-					nextMoveA := board(to_integer(unsigned(headA_X)-1),to_integer(unsigned(headA_Y)));
+					nextMoveA := board(headA_X - "1", headA_Y);
 					if  nextMoveA = "0000000000000" then -- Puste pole							
 						decA <= '1';
-						board(to_integer(unsigned(headA_X)-1),to_integer(unsigned(headA_Y))) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X - "1", headA_Y) 
+							<= lenA + "1";
 					elsif nextMoveA = "1111111111111" then -- Jedzenie							
 						decA <= '0';
-						board(to_integer(unsigned(headA_X)-1),to_integer(unsigned(headA_Y))) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X - "1", headA_Y) 
+							<= lenA + "1";
 					elsif ( nextMoveA AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
 						-- GAME OVER
 						
@@ -217,18 +217,18 @@ begin
 					end if;	
 				end if;
 			when "10" => ------------------------------------------------------DOWN-A
-				if to_integer(unsigned(headA_Y)) = 43 then
+				if headA_Y = 43 then
 					-- GAME OVER
 				else
-					nextMoveA := board(to_integer(unsigned(headA_X)),to_integer(unsigned(headA_Y))+1);
+					nextMoveA := board(headA_X, headA_Y + "1");
 					if  nextMoveA = "0000000000000" then -- Puste pole							
 						decA <= '1';
-						board(to_integer(unsigned(headA_X)),to_integer(unsigned(headA_Y))+1) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X, headA_Y + "1") 
+							<= lenA + "1";
 					elsif nextMoveA = "1111111111111" then -- Jedzenie							
 						decA <= '0';
-						board(to_integer(unsigned(headA_X)),to_integer(unsigned(headA_Y))+1) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X, headA_Y + "1") 
+							<= lenA + "1";
 					elsif ( nextMoveA AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
 						-- GAME OVER
 						
@@ -237,18 +237,18 @@ begin
 					end if;	
 				end if;
 			when "11" => ------------------------------------------------------RIGHT-A
-				if to_integer(unsigned(headA_X)) = 63 then
+				if headA_X = 63 then
 					-- GAME OVER
 				else
-					nextMoveA := board(to_integer(unsigned(headA_X)+1),to_integer(unsigned(headA_Y)));
+					nextMoveA := board(headA_X + "1", headA_Y);
 					if  nextMoveA = "0000000000000" then -- Puste pole							
 						decA <= '1';
-						board(to_integer(unsigned(headA_X)+1),to_integer(unsigned(headA_Y))) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X + "1", headA_Y) 
+							<= lenA + "1";
 					elsif nextMoveA = "1111111111111" then -- Jedzenie							
 						decA <= '0';
-						board(to_integer(unsigned(headA_X)+1),to_integer(unsigned(headA_Y))) 
-							<= std_logic_vector(to_unsigned(lenA+1, 13));
+						board(headA_X + "1", headA_Y) 
+							<= lenA + "1";
 					elsif ( nextMoveA AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
 						-- GAME OVER
 						
@@ -259,83 +259,84 @@ begin
 			when others => null;
 		end case;
 		case directionB is
-			when "00" => ------------------------------------------------------UP-B
-				if to_integer(unsigned(headB_Y)) = 0 then
+			when "00" => ------------------------------------------------------UP-A
+				if headB_Y = 0 then
 					-- GAME OVER
 				else
-					nextMoveB := board(to_integer(unsigned(headB_X)),to_integer(unsigned(headB_Y))-1);
+					nextMoveB := board(headB_X, headB_Y - "1");
 					if  nextMoveB = "0000000000000" then -- Puste pole							
 						decB <= '1';
-						board(to_integer(unsigned(headB_X)),to_integer(unsigned(headB_Y))-1) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
-					elsif nextMoveB = "1111111111111" then -- Jedzenie							
-						decB <= '0';
-						board(to_integer(unsigned(headB_X)),to_integer(unsigned(headB_Y))-1) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
-					elsif ( nextMoveB AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
-						-- GAME OVER
-						
-					else   -- W¹¿ A                                                        
-						-- GAME OVER
-					end if;
-				end if;
-			when "01" => ------------------------------------------------------LEFT-B
-				if to_integer(unsigned(headB_X)) = 0 then
-					-- GAME OVER
-				else
-					nextMoveB := board(to_integer(unsigned(headB_X)-1),to_integer(unsigned(headB_Y)));
-					if  nextMoveB = "0000000000000" then -- Puste pole							
-						decB <= '1';
-						board(to_integer(unsigned(headB_X)-1),to_integer(unsigned(headB_Y))) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
-					elsif nextMoveB = "1111111111111" then -- Jedzenie							
-						decB <= '0';
-						board(to_integer(unsigned(headB_X)-1),to_integer(unsigned(headB_Y))) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
-					elsif ( nextMoveB AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
-						-- GAME OVER
-						
-					else   -- W¹¿ A                                                        
-						-- GAME OVER
-					end if;
-				end if;
-			when "10" => ------------------------------------------------------DOWN-B
-				if to_integer(unsigned(headB_Y)) = 43 then
-					-- GAME OVER
-				else
-					nextMoveB := board(to_integer(unsigned(headB_X)),to_integer(unsigned(headB_Y))+1);
-					if  nextMoveB = "0000000000000" then -- Puste pole							
-						decB <= '1';
-						board(to_integer(unsigned(headB_X)),to_integer(unsigned(headB_Y))+1) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
-					elsif nextMoveB = "1111111111111" then -- Jedzenie							
-						decB <= '0';
-						board(to_integer(unsigned(headB_X)),to_integer(unsigned(headB_Y))+1) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
-					elsif ( nextMoveB AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
-						-- GAME OVER
-						
-					else   -- W¹¿ A                                                        
-						-- GAME OVER
-					end if;
-				end if;
-			when "11" => ------------------------------------------------------RIGHT-B
-				if to_integer(unsigned(headB_X)) = 63 then
-					-- GAME OVER
-				else
-					nextMoveB := board(to_integer(unsigned(headB_X)+1),to_integer(unsigned(headB_Y)));
-					if  nextMoveB = "0000000000000" then -- Puste pole							
-						decB <= '1';
-						board(to_integer(unsigned(headB_X)+1),to_integer(unsigned(headB_Y))) 
+						board(headB_X, headB_Y - "1") 
 							<= lenB + "1";
 					elsif nextMoveB = "1111111111111" then -- Jedzenie							
 						decB <= '0';
-						board(to_integer(unsigned(headB_X)+1),to_integer(unsigned(headB_Y))) 
-							<= std_logic_vector(to_unsigned(lenB+1, 13));
-					elsif ( nextMoveB AND "1000000000000" ) = "1000000000000" then -- W¹¿ B
+						board(headB_X, headB_Y - "1") 
+							<= lenB + "1";
+					elsif ( nextMoveB AND "1000000000000" ) = "0000000000000" then -- W¹¿ A
 						-- GAME OVER
 						
-					else   -- W¹¿ A                                                        
+					else   -- W¹¿ B                                                        
+						-- GAME OVER
+						
+					end if;
+				end if;
+			when "01" => ------------------------------------------------------LEFT-A
+				if headB_X = 0 then
+					-- GAME OVER
+				else
+					nextMoveB := board(headB_X - "1", headB_Y);
+					if  nextMoveB = "0000000000000" then -- Puste pole							
+						decB <= '1';
+						board(headB_X - "1", headB_Y) 
+							<= lenB + "1";
+					elsif nextMoveB = "1111111111111" then -- Jedzenie							
+						decB <= '0';
+						board(headB_X - "1", headB_Y) 
+							<= lenB + "1";
+					elsif ( nextMoveB AND "1000000000000" ) = "0000000000000" then -- W¹¿ A
+						-- GAME OVER
+						
+					else   -- W¹¿ B                                                        
+						-- GAME OVER
+					end if;	
+				end if;
+			when "10" => ------------------------------------------------------DOWN-A
+				if headB_Y = 43 then
+					-- GAME OVER
+				else
+					nextMoveB := board(headB_X, headB_Y + "1");
+					if  nextMoveB = "0000000000000" then -- Puste pole							
+						decB <= '1';
+						board(headB_X, headB_Y + "1") 
+							<= lenB + "1";
+					elsif nextMoveB = "1111111111111" then -- Jedzenie							
+						decB <= '0';
+						board(headB_X, headB_Y + "1") 
+							<= lenB + "1";
+					elsif ( nextMoveB AND "1000000000000" ) = "0000000000000" then -- W¹¿ A
+						-- GAME OVER
+						
+					else   -- W¹¿ B                                                        
+						-- GAME OVER
+					end if;	
+				end if;
+			when "11" => ------------------------------------------------------RIGHT-A
+				if headB_X = 63 then
+					-- GAME OVER
+				else
+					nextMoveB := board(headB_X + "1", headB_Y);
+					if  nextMoveB = "0000000000000" then -- Puste pole							
+						decB <= '1';
+						board(headB_X + "1", headB_Y) 
+							<= lenB + "1";
+					elsif nextMoveB = "1111111111111" then -- Jedzenie							
+						decB <= '0';
+						board(headB_X + "1", headB_Y) 
+							<= lenB + "1";
+					elsif ( nextMoveB AND "1000000000000" ) = "0000000000000" then -- W¹¿A
+						-- GAME OVER
+						
+					else   -- W¹¿ B                                                        
 						-- GAME OVER
 					end if;
 				end if;
