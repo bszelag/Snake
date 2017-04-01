@@ -1,2 +1,0 @@
-vhdl isim_temp "VGA_640x480.vhd"
-vhdl isim_temp "VGA_640x480_tb.vhd"

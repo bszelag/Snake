@@ -8,9 +8,14 @@ DI_Rdy
 =Y[5:0]=
 =pixelX[9:0]=
 =pixelY[9:0]=
+=dataInArray[12:0]=
 [Outputs]
+writeMem
 Start
+=XMem[5:0]=
+=YMem[5:0]=
 =RGB[2:0]=
+=dataOutArray[12:0]=
 =outPointsA[13:0]=
 =outPointsB[13:0]=
 [BiDir]

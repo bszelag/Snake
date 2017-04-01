@@ -1,15 +1,20 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-Q6MT7AJ::  Sat Mar 18 22:19:45 2017
+LAB016-06::  Fri Mar 31 13:47:53 2017
 
 par -w -intstyle ise -ol high -t 1 main_map.ncd main.ncd main.pcf 
 
 
 Constraints file: main.pcf.
-Loading device for application Rf_Device from file '3s500e.nph' in environment
-D:\PlikiProgramow\Xilinx\14.7\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
    "main" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
 
 Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
@@ -20,12 +25,12 @@ Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                           7 out of 232     3%
+ Number of External IOBs                           9 out of 232     3%
 
-   Number of External Input IOBs                  2
+   Number of External Input IOBs                  4
 
-      Number of External Input IBUFs              2
-        Number of LOCed External Input IBUFs      2 out of 2     100%
+      Number of External Input IBUFs              4
+        Number of LOCed External Input IBUFs      4 out of 4     100%
 
 
    Number of External Output IOBs                 5
@@ -39,8 +44,9 @@ Design Summary Report:
 
    Number of BUFGMUXs                        3 out of 24     12%
    Number of MULT18X18SIOs                   2 out of 20     10%
-   Number of Slices                        533 out of 4656   11%
-      Number of SLICEMs                      0 out of 2328    0%
+   Number of RAMB16s                         3 out of 20     15%
+   Number of Slices                        537 out of 4656   11%
+      Number of SLICEMs                      2 out of 2328    1%
 
 
 
@@ -58,40 +64,40 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:1187911c) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:91075423) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:1187911c) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:91075423) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:1187911c) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:91075423) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:7b4fc466) REAL time: 3 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:1321cd85) REAL time: 4 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:7b4fc466) REAL time: 3 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:1321cd85) REAL time: 4 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:7b4fc466) REAL time: 3 secs 
+Phase 6.36  Local Placement Optimization (Checksum:1321cd85) REAL time: 4 secs 
 
 Phase 7.8  Global Placement
-..............
-......
-Phase 7.8  Global Placement (Checksum:3383058a) REAL time: 3 secs 
+..................
+.....
+Phase 7.8  Global Placement (Checksum:7c6a2c3e) REAL time: 4 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:3383058a) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:7c6a2c3e) REAL time: 4 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:c6f1092c) REAL time: 3 secs 
+Phase 9.18  Placement Optimization (Checksum:50e5524) REAL time: 5 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:c6f1092c) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:50e5524) REAL time: 5 secs 
 
-Total REAL time to Placer completion: 3 secs 
-Total CPU  time to Placer completion: 3 secs 
+Total REAL time to Placer completion: 5 secs 
+Total CPU  time to Placer completion: 4 secs 
 Writing design to file main.ncd
 
 
@@ -99,28 +105,28 @@ Writing design to file main.ncd
 Starting Router
 
 
-Phase  1  : 3768 unrouted;      REAL time: 7 secs 
+Phase  1  : 3807 unrouted;      REAL time: 9 secs 
 
-Phase  2  : 3638 unrouted;      REAL time: 7 secs 
+Phase  2  : 3630 unrouted;      REAL time: 10 secs 
 
-Phase  3  : 873 unrouted;      REAL time: 7 secs 
+Phase  3  : 820 unrouted;      REAL time: 10 secs 
 
-Phase  4  : 873 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  4  : 820 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 10 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
 Updating file: main.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 11 secs 
 WARNING:Route:455 - CLK Net:XLXI_9/Clock16Hz may have excessive skew because 
-      3 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 8 secs 
-Total CPU time to Router completion: 8 secs 
+Total REAL time to Router completion: 11 secs 
+Total CPU time to Router completion: 11 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -138,13 +144,13 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|        XLXI_1/Clock | BUFGMUX_X1Y10| No   |   41 |  0.045     |  0.169      |
+|        XLXI_1/Clock | BUFGMUX_X1Y10| No   |   33 |  0.058     |  0.190      |
 +---------------------+--------------+------+------+------------+-------------+
-|     XLXI_9/Clock1Hz |  BUFGMUX_X1Y0| No   |   16 |  0.013     |  0.133      |
+|     Clk_50MHz_BUFGP | BUFGMUX_X1Y11| No   |   59 |  0.038     |  0.175      |
 +---------------------+--------------+------+------+------------+-------------+
-|     Clk_50MHz_BUFGP | BUFGMUX_X1Y11| No   |   15 |  0.029     |  0.175      |
+|     XLXI_9/Clock1Hz |  BUFGMUX_X1Y0| No   |   15 |  0.015     |  0.153      |
 +---------------------+--------------+------+------+------------+-------------+
-|    XLXI_9/Clock16Hz |         Local|      |    4 |  0.520     |  1.538      |
+|    XLXI_9/Clock16Hz |         Local|      |    4 |  0.085     |  2.060      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -164,8 +170,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |    12.841ns|     7.159ns|       0|           0
-  s HIGH 50%                                | HOLD        |     1.143ns|            |       0|           0
+  NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 n | SETUP       |    12.746ns|     7.254ns|       0|           0
+  s HIGH 50%                                | HOLD        |     0.881ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -176,10 +182,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 8 secs 
-Total CPU time to PAR completion: 8 secs 
+Total REAL time to PAR completion: 12 secs 
+Total CPU time to PAR completion: 11 secs 
 
-Peak Memory Usage:  263 MB
+Peak Memory Usage:  230 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

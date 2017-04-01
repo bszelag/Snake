@@ -1,0 +1,8 @@
+vhdtdtfi -lib work sync_ram.vhd -prj Snake -o sync_ram.spl -module sync_ram -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e sync_ram.spl C:/Users/lab/Desktop/Snake/Snake/sync_ram.sym 
+vhdtdtfi -lib work sync_ram.vhd -prj Snake -o sync_ram.spl -module sync_ram -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e sync_ram.spl C:/Users/lab/Desktop/Snake/Snake/sync_ram.sym 
+vhdtdtfi -lib work sync_ram.vhd -prj Snake -o sync_ram.spl -module sync_ram -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e sync_ram.spl C:/Users/lab/Desktop/Snake/Snake/sync_ram.sym 
+vhdtdtfi -lib work sync_ram.vhd -prj Snake -o sync_ram.spl -module sync_ram -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e sync_ram.spl C:/Users/lab/Desktop/Snake/Snake/sync_ram.sym 

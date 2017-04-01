@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Mar 18 22:19:42 2017
+// Written by: Map P.20131013 on Fri Mar 31 13:47:50 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -10,6 +10,8 @@ COMP "VGA_R" LOCATE = SITE "H14" LEVEL 1;
 COMP "Clk_50MHz" LOCATE = SITE "C9" LEVEL 1;
 COMP "VGA_HS" LOCATE = SITE "F15" LEVEL 1;
 COMP "VGA_VS" LOCATE = SITE "F14" LEVEL 1;
+COMP "PS2_Data" LOCATE = SITE "G13" LEVEL 1;
+COMP "PS2_Clk" LOCATE = SITE "G14" LEVEL 1;
 NET "Clk_50MHz_BUFGP/IBUFG" BEL "Clk_50MHz_BUFGP/BUFG.GCLKMUX"
         USELOCALCONNECT;
 NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;

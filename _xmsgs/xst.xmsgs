@@ -5,22 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">pixelX</arg>&apos; of component &apos;<arg fmt="%s" index="4">VGA_640x480</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">pixelX</arg>&apos; of component &apos;<arg fmt="%s" index="4">VGA_640x480</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">pixelY</arg>&apos; of component &apos;<arg fmt="%s" index="4">VGA_640x480</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">150</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">pixelY</arg>&apos; of component &apos;<arg fmt="%s" index="4">VGA_640x480</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">151</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">outPointsB</arg>&apos; of component &apos;<arg fmt="%s" index="4">engine</arg>&apos;.
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">175</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">166</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/Snake/Snake/main.vhf</arg>&quot; line <arg fmt="%d" index="2">207</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">outPointsB</arg>&apos; of component &apos;<arg fmt="%s" index="4">engine</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/engine.vhd</arg>&quot; line <arg fmt="%d" index="2">108</arg>: Index value(s) does not match array range, simulation mismatch.
-</msg>
-
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/engine.vhd</arg>&quot; line <arg fmt="%d" index="2">116</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">dataOutArray</arg>&gt; in unit &lt;<arg fmt="%s" index="2">engine</arg>&gt; has a constant value of <arg fmt="%s" index="3">1000000000001</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">PointsB</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -32,10 +29,16 @@
 	- use the attribute &apos;<arg fmt="%s" index="7">safe_implementation</arg> <arg fmt="%s" index="8">yes</arg>&apos; to force XST to perform a safe (but less efficient) optimization
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd</arg>&quot; line <arg fmt="%d" index="2">664</arg>: The result of a <arg fmt="%d" index="3">4</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">6</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/Snake/Snake/VGA_640x480.vhd</arg>&quot; line <arg fmt="%d" index="2">664</arg>: The result of a <arg fmt="%d" index="3">4</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">6</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
-<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd</arg>&quot; line <arg fmt="%d" index="2">664</arg>: The result of a <arg fmt="%d" index="3">4</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">6</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+<msg type="warning" file="Xst" num="643" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Desktop/Snake/Snake/VGA_640x480.vhd</arg>&quot; line <arg fmt="%d" index="2">664</arg>: The result of a <arg fmt="%d" index="3">4</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">6</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">E0</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">Clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">pixelX</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -50,275 +53,56 @@
 <msg type="warning" file="Xst" num="1305" delta="old" >Output &lt;<arg fmt="%s" index="1">outPointsB</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">00000000000000</arg>.
 </msg>
 
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">testtest</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">mode</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">headB_Y</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">headB_X</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">headA_Y</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">headA_X</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">divider</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">directionB</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00</arg>.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">directionB</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">directionA</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00</arg>.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">directionA</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;9&gt;</arg>&gt; is used but never assigned. Tied to default value.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">decB</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;8&gt;</arg>&gt; is used but never assigned. Tied to default value.
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">decA</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;7&gt;</arg>&gt; is used but never assigned. Tied to default value.
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_33_pixelY_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;6&gt;&lt;0:5&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;6&gt;&lt;7:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;63&gt;&lt;1:42&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;62&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;61&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;60&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;5&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;59&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;58&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;57&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;56&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;55&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;54&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;53&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;52&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;51&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;50&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;4&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;49&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;48&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;47&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;46&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;45&gt;&lt;0:12&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;45&gt;&lt;14:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;44&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;43&gt;&lt;1:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;42&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;41&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;40&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;3&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;39&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;38&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;37&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;36&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;35&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;34&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;33&gt;&lt;0:22&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;33&gt;&lt;24:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;32&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;31&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;30&gt;&lt;0:14&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;30&gt;&lt;19:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;2&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;29&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;28&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;27&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;26&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;25&gt;&lt;0:21&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;25&gt;&lt;23:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;24&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;23&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;22&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;21&gt;&lt;0:9&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;21&gt;&lt;11:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;20&gt;&lt;0:9&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;20&gt;&lt;11:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;1&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;19&gt;&lt;0:9&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;19&gt;&lt;11:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;18&gt;&lt;0:9&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;18&gt;&lt;11:43&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;17&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;16&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;15&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;14&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;13&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;12&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;11&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;10&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;0&gt;&lt;1:10&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;0&gt;&lt;12:19&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;0&gt;&lt;21:32&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">board&lt;0&gt;&lt;34:42&gt;</arg>&gt; is used but never assigned. Tied to default value.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">E0</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_33_pixelX_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_1_PointsB_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_15_pixelY_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000</arg>.
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">writeM</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">XLXI_33</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_15_pixelX_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000</arg>.
-</msg>
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_ram</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
-<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_15_Clk_50_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
-</msg>
-
-<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Start</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">XLXI_15</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1898" delta="old" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">DO_Rdy</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_17</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">XLXI_17</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-It will be removed from the design.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">Start</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">engine</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">writeM</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">engine</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">0</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">XLXI_1/pixelY_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
@@ -381,19 +165,7 @@ It will be removed from the design.
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">XLXI_1/pixelX_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">XLXI_17/D_Type_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">XLXI_17/D_Type_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">XLXI_17/DO_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">XLXI_17/DO_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">XLXI_17/DO_Rdy</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">main</arg>&gt;.
+<msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">XLXI_29/Mram_ram2</arg>&gt;, &lt;<arg fmt="%s" index="2">XLXI_29/Mram_ram3</arg>&gt; are equivalent, second RAM is removed
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\lab\Desktop\Snake\Snake\testmain.ncd
+OUTFILE=C:\Users\lab\Desktop\Snake\Snake\testmain.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\lab\Desktop\Snake\Snake
+LICENSE=ISE
+USER_INFO=174693031_177724690_210552578_727

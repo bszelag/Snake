@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : main.vhf
--- /___/   /\     Timestamp : 03/18/2017 22:19:17
+-- /___/   /\     Timestamp : 03/31/2017 13:47:19
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Ja/Desktop/Snake/Snake/main.vhf -w C:/Users/Ja/Desktop/Snake/Snake/main.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/Snake/Snake/main.vhf -w C:/Users/lab/Desktop/Snake/Snake/main.sch
 --Design Name: main
 --Device: spartan3e
 --Purpose:
@@ -53,10 +53,15 @@ architecture BEHAVIORAL of main is
    signal XLXN_32                   : std_logic;
    signal XLXN_33                   : std_logic_vector (1 downto 0);
    signal XLXN_34                   : std_logic_vector (1 downto 0);
+   signal XLXN_35                   : std_logic_vector (11 downto 0);
+   signal XLXN_40                   : std_logic;
+   signal XLXN_42                   : std_logic_vector (12 downto 0);
+   signal XLXN_43                   : std_logic_vector (12 downto 0);
+   signal XLXN_44                   : std_logic_vector (5 downto 0);
+   signal XLXN_45                   : std_logic_vector (5 downto 0);
    signal XLXI_1_PointsB_openSignal : std_logic_vector (13 downto 0);
-   signal XLXI_15_Clk_50_openSignal : std_logic;
-   signal XLXI_15_pixelX_openSignal : std_logic_vector (9 downto 0);
-   signal XLXI_15_pixelY_openSignal : std_logic_vector (9 downto 0);
+   signal XLXI_33_pixelX_openSignal : std_logic_vector (9 downto 0);
+   signal XLXI_33_pixelY_openSignal : std_logic_vector (9 downto 0);
    component VGA_640x480
       port ( CLK     : in    std_logic; 
              CLR     : in    std_logic; 
@@ -84,22 +89,6 @@ architecture BEHAVIORAL of main is
              Min         : out   std_logic_vector (5 downto 0));
    end component;
    
-   component engine
-      port ( Clk        : in    std_logic; 
-             Clk_50     : in    std_logic; 
-             DI_Rdy     : in    std_logic; 
-             DI         : in    std_logic_vector (1 downto 0); 
-             D_Type     : in    std_logic_vector (1 downto 0); 
-             X          : in    std_logic_vector (5 downto 0); 
-             Y          : in    std_logic_vector (5 downto 0); 
-             pixelX     : in    std_logic_vector (9 downto 0); 
-             pixelY     : in    std_logic_vector (9 downto 0); 
-             Start      : out   std_logic; 
-             RGB        : out   std_logic_vector (2 downto 0); 
-             outPointsA : out   std_logic_vector (13 downto 0); 
-             outPointsB : out   std_logic_vector (13 downto 0));
-   end component;
-   
    component PS2_Kbd
       port ( PS2_Clk   : in    std_logic; 
              PS2_Data  : in    std_logic; 
@@ -120,6 +109,41 @@ architecture BEHAVIORAL of main is
              DO_Rdy : out   std_logic; 
              DO     : out   std_logic_vector (1 downto 0); 
              D_Type : out   std_logic_vector (1 downto 0));
+   end component;
+   
+   component decAddr
+      port ( x    : in    std_logic_vector (5 downto 0); 
+             y    : in    std_logic_vector (5 downto 0); 
+             addr : out   std_logic_vector (11 downto 0));
+   end component;
+   
+   component sync_ram
+      port ( clock   : in    std_logic; 
+             we      : in    std_logic; 
+             address : in    std_logic_vector (11 downto 0); 
+             datain  : in    std_logic_vector (12 downto 0); 
+             dataout : out   std_logic_vector (12 downto 0));
+   end component;
+   
+   component engine
+      port ( Clk          : in    std_logic; 
+             Clk_50       : in    std_logic; 
+             DI_Rdy       : in    std_logic; 
+             DI           : in    std_logic_vector (1 downto 0); 
+             D_Type       : in    std_logic_vector (1 downto 0); 
+             X            : in    std_logic_vector (5 downto 0); 
+             Y            : in    std_logic_vector (5 downto 0); 
+             pixelX       : in    std_logic_vector (9 downto 0); 
+             pixelY       : in    std_logic_vector (9 downto 0); 
+             dataInArray  : in    std_logic_vector (12 downto 0); 
+             writeMem     : out   std_logic; 
+             Start        : out   std_logic; 
+             XMem         : out   std_logic_vector (5 downto 0); 
+             YMem         : out   std_logic_vector (5 downto 0); 
+             RGB          : out   std_logic_vector (2 downto 0); 
+             dataOutArray : out   std_logic_vector (12 downto 0); 
+             outPointsA   : out   std_logic_vector (13 downto 0); 
+             outPointsB   : out   std_logic_vector (13 downto 0));
    end component;
    
 begin
@@ -148,21 +172,6 @@ begin
                 Min(5 downto 0)=>XLXN_11(5 downto 0),
                 Sec(5 downto 0)=>XLXN_10(5 downto 0));
    
-   XLXI_15 : engine
-      port map (Clk=>XLXN_24,
-                Clk_50=>XLXI_15_Clk_50_openSignal,
-                DI(1 downto 0)=>XLXN_33(1 downto 0),
-                DI_Rdy=>XLXN_32,
-                D_Type(1 downto 0)=>XLXN_34(1 downto 0),
-                pixelX(9 downto 0)=>XLXI_15_pixelX_openSignal(9 downto 0),
-                pixelY(9 downto 0)=>XLXI_15_pixelY_openSignal(9 downto 0),
-                X(5 downto 0)=>XLXN_25(5 downto 0),
-                Y(5 downto 0)=>XLXN_26(5 downto 0),
-                outPointsA(13 downto 0)=>XLXN_22(13 downto 0),
-                outPointsB=>open,
-                RGB(2 downto 0)=>XLXN_21(2 downto 0),
-                Start=>XLXN_20);
-   
    XLXI_16 : PS2_Kbd
       port map (Clk_Sys=>Clk_50MHz,
                 Clk_50MHz=>Clk_50MHz,
@@ -182,6 +191,38 @@ begin
                 DO(1 downto 0)=>XLXN_33(1 downto 0),
                 DO_Rdy=>XLXN_32,
                 D_Type(1 downto 0)=>XLXN_34(1 downto 0));
+   
+   XLXI_28 : decAddr
+      port map (x(5 downto 0)=>XLXN_45(5 downto 0),
+                y(5 downto 0)=>XLXN_44(5 downto 0),
+                addr(11 downto 0)=>XLXN_35(11 downto 0));
+   
+   XLXI_29 : sync_ram
+      port map (address(11 downto 0)=>XLXN_35(11 downto 0),
+                clock=>Clk_50MHz,
+                datain(12 downto 0)=>XLXN_43(12 downto 0),
+                we=>XLXN_40,
+                dataout(12 downto 0)=>XLXN_42(12 downto 0));
+   
+   XLXI_33 : engine
+      port map (Clk=>XLXN_24,
+                Clk_50=>Clk_50MHz,
+                dataInArray(12 downto 0)=>XLXN_42(12 downto 0),
+                DI(1 downto 0)=>XLXN_33(1 downto 0),
+                DI_Rdy=>XLXN_32,
+                D_Type(1 downto 0)=>XLXN_34(1 downto 0),
+                pixelX(9 downto 0)=>XLXI_33_pixelX_openSignal(9 downto 0),
+                pixelY(9 downto 0)=>XLXI_33_pixelY_openSignal(9 downto 0),
+                X(5 downto 0)=>XLXN_25(5 downto 0),
+                Y(5 downto 0)=>XLXN_26(5 downto 0),
+                dataOutArray(12 downto 0)=>XLXN_43(12 downto 0),
+                outPointsA(13 downto 0)=>XLXN_22(13 downto 0),
+                outPointsB=>open,
+                RGB(2 downto 0)=>XLXN_21(2 downto 0),
+                Start=>XLXN_20,
+                writeMem=>XLXN_40,
+                XMem(5 downto 0)=>XLXN_45(5 downto 0),
+                YMem(5 downto 0)=>XLXN_44(5 downto 0));
    
 end BEHAVIORAL;
 

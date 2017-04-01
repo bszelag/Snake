@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: main.prj
 
@@ -49,7 +49,7 @@ Top Module Name                    : main
 Automatic FSM Extraction           : YES
 FSM Encoding Algorithm             : Auto
 Safe Implementation                : No
-FSM Style                          : LUT
+FSM Style                          : Bram
 RAM Extraction                     : Yes
 RAM Style                          : Auto
 ROM Extraction                     : Yes
@@ -80,8 +80,8 @@ Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Goal                  : Area
+Optimization Effort                : 2
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -95,7 +95,7 @@ Case Specifier                     : Maintain
 Slice Utilization Ratio            : 100
 BRAM Utilization Ratio             : 100
 Verilog 2001                       : YES
-Auto BRAM Packing                  : NO
+Auto BRAM Packing                  : YES
 Slice Utilization Ratio Delta      : 5
 
 =========================================================================
@@ -104,16 +104,21 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd" in Library work.
-Architecture behavioral of Entity vga_640x480 is up to date.
-Compiling vhdl file "C:/Users/Ja/Desktop/Snake/Snake/timer.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/Snake/Snake/VGA_640x480.vhd" in Library work.
+Entity <vga_640x480> compiled.
+Entity <vga_640x480> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Desktop/Snake/Snake/timer.vhd" in Library work.
 Architecture behavioral of Entity timer is up to date.
-Compiling vhdl file "C:/Users/Ja/Desktop/Snake/Snake/engine.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/Snake/Snake/kbdDecoder.vhd" in Library work.
+Architecture behavioral of Entity kbddecoder is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/Snake/Snake/decAddr.vhd" in Library work.
+Architecture behavioral of Entity decaddr is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/Snake/Snake/sync_ram.vhd" in Library work.
+Architecture rtl of Entity sync_ram is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/Snake/Snake/engine.vhd" in Library work.
 Entity <engine> compiled.
 Entity <engine> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Ja/Desktop/Snake/Snake/kbdDecoder.vhd" in Library work.
-Architecture behavioral of Entity kbddecoder is up to date.
-Compiling vhdl file "C:/Users/Ja/Desktop/Snake/Snake/main.vhf" in Library work.
+Compiling vhdl file "C:/Users/lab/Desktop/Snake/Snake/main.vhf" in Library work.
 Entity <main> compiled.
 Entity <main> (Architecture <behavioral>) compiled.
 
@@ -126,19 +131,23 @@ Analyzing hierarchy for entity <VGA_640x480> in library <work> (architecture <be
 
 Analyzing hierarchy for entity <timer> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <engine> in library <work> (architecture <behavioral>).
-
 Analyzing hierarchy for entity <kbdDecoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <decAddr> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <sync_ram> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <engine> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <main> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "C:/Users/Ja/Desktop/Snake/Snake/main.vhf" line 126: Unconnected output port 'pixelX' of component 'VGA_640x480'.
-WARNING:Xst:753 - "C:/Users/Ja/Desktop/Snake/Snake/main.vhf" line 126: Unconnected output port 'pixelY' of component 'VGA_640x480'.
-WARNING:Xst:753 - "C:/Users/Ja/Desktop/Snake/Snake/main.vhf" line 151: Unconnected output port 'outPointsB' of component 'engine'.
-WARNING:Xst:2211 - "C:/Users/Ja/Desktop/Snake/Snake/main.vhf" line 166: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/Snake/Snake/main.vhf" line 150: Unconnected output port 'pixelX' of component 'VGA_640x480'.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/Snake/Snake/main.vhf" line 150: Unconnected output port 'pixelY' of component 'VGA_640x480'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/Snake/Snake/main.vhf" line 175: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/Snake/Snake/main.vhf" line 207: Unconnected output port 'outPointsB' of component 'engine'.
 Entity <main> analyzed. Unit <main> generated.
 
 Analyzing Entity <VGA_640x480> in library <work> (Architecture <behavioral>).
@@ -147,13 +156,18 @@ Entity <VGA_640x480> analyzed. Unit <VGA_640x480> generated.
 Analyzing Entity <timer> in library <work> (Architecture <behavioral>).
 Entity <timer> analyzed. Unit <timer> generated.
 
-Analyzing Entity <engine> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Ja/Desktop/Snake/Snake/engine.vhd" line 108: Index value(s) does not match array range, simulation mismatch.
-INFO:Xst:1561 - "C:/Users/Ja/Desktop/Snake/Snake/engine.vhd" line 116: Mux is complete : default of case is discarded
-Entity <engine> analyzed. Unit <engine> generated.
-
 Analyzing Entity <kbdDecoder> in library <work> (Architecture <behavioral>).
 Entity <kbdDecoder> analyzed. Unit <kbdDecoder> generated.
+
+Analyzing Entity <decAddr> in library <work> (Architecture <behavioral>).
+Entity <decAddr> analyzed. Unit <decAddr> generated.
+
+Analyzing Entity <sync_ram> in library <work> (Architecture <rtl>).
+Entity <sync_ram> analyzed. Unit <sync_ram> generated.
+
+Analyzing Entity <engine> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <dataOutArray> in unit <engine> has a constant value of 1000000000001 during circuit operation. The register is replaced by logic.
+Entity <engine> analyzed. Unit <engine> generated.
 
 
 =========================================================================
@@ -163,15 +177,15 @@ Entity <kbdDecoder> analyzed. Unit <kbdDecoder> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <VGA_640x480>.
-    Related source file is "C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd".
+    Related source file is "C:/Users/lab/Desktop/Snake/Snake/VGA_640x480.vhd".
 WARNING:Xst:647 - Input <PointsB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:2117 - HDL ADVISOR - Mux Selector <points_10$mux0000> of Case statement line 553 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
    	- add an 'INIT' attribute on signal <points_10$mux0000> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
    	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
     Using one-hot encoding for signal <points_10$mux0000>.
-WARNING:Xst:643 - "C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd" line 664: The result of a 4x4-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
-WARNING:Xst:643 - "C:/Users/Ja/Desktop/Snake/Snake/VGA_640x480.vhd" line 664: The result of a 4x4-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/lab/Desktop/Snake/Snake/VGA_640x480.vhd" line 664: The result of a 4x4-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/lab/Desktop/Snake/Snake/VGA_640x480.vhd" line 664: The result of a 4x4-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
     Found 10x200-bit ROM for signal <$rom0000>.
     Found 10-bit register for signal <pixelX>.
     Found 10-bit register for signal <pixelY>.
@@ -318,7 +332,7 @@ Unit <VGA_640x480> synthesized.
 
 
 Synthesizing Unit <timer>.
-    Related source file is "C:/Users/Ja/Desktop/Snake/Snake/timer.vhd".
+    Related source file is "C:/Users/lab/Desktop/Snake/Snake/timer.vhd".
     Found 6-bit register for signal <Min>.
     Found 6-bit register for signal <Sec>.
     Found 1-bit register for signal <Clock16Hz>.
@@ -336,124 +350,8 @@ Synthesizing Unit <timer>.
 Unit <timer> synthesized.
 
 
-Synthesizing Unit <engine>.
-    Related source file is "C:/Users/Ja/Desktop/Snake/Snake/engine.vhd".
-WARNING:Xst:647 - Input <pixelX> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <pixelY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1305 - Output <outPointsA> is never assigned. Tied to value 00000000000000.
-WARNING:Xst:1305 - Output <outPointsB> is never assigned. Tied to value 00000000000000.
-WARNING:Xst:1780 - Signal <mode> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <divider> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <directionB> is used but never assigned. This sourceless signal will be automatically connected to value 00.
-WARNING:Xst:653 - Signal <directionA> is used but never assigned. This sourceless signal will be automatically connected to value 00.
-WARNING:Xst:1781 - Signal <board<9>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<8>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<7>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<6><0:5>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<6><7:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<63><1:42>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<62>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<61>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<60>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<5>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<59>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<58>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<57>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<56>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<55>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<54>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<53>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<52>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<51>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<50>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<4>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<49>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<48>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<47>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<46>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<45><0:12>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<45><14:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<44>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<43><1:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<42>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<41>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<40>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<3>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<39>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<38>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<37>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<36>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<35>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<34>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<33><0:22>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<33><24:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<32>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<31>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<30><0:14>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<30><19:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<2>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<29>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<28>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<27>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<26>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<25><0:21>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<25><23:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<24>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<23>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<22>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<21><0:9>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<21><11:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<20><0:9>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<20><11:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<1>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<19><0:9>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<19><11:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<18><0:9>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<18><11:43>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<17>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<16>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<15>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<14>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<13>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<12>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<11>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<10>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<0><1:10>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<0><12:19>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<0><21:32>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <board<0><34:42>> is used but never assigned. Tied to default value.
-    Using one-hot encoding for signal <directionA>.
-    Using one-hot encoding for signal <directionB>.
-    Found 64x2-bit ROM for signal <board$mux0048> created at line 108.
-    Found 4x3-bit ROM for signal <RGB>.
-    Found 1-bit register for signal <Start>.
-    Found 2-bit 44-to-1 multiplexer for signal <board$mux0044> created at line 108.
-    Found 6-bit register for signal <headA_X>.
-    Found 6-bit addsub for signal <headA_X$share0000> created at line 172.
-    Found 6-bit register for signal <headA_Y>.
-    Found 6-bit addsub for signal <headA_Y$share0000> created at line 172.
-    Found 6-bit register for signal <headB_X>.
-    Found 6-bit addsub for signal <headB_X$share0000> created at line 203.
-    Found 6-bit register for signal <headB_Y>.
-    Found 6-bit addsub for signal <headB_Y$share0000> created at line 203.
-    Found 6-bit register for signal <tailA_X>.
-    Found 6-bit addsub for signal <tailA_X$share0000> created at line 172.
-    Found 6-bit register for signal <tailA_Y>.
-    Found 6-bit addsub for signal <tailA_Y$share0000> created at line 172.
-    Found 6-bit register for signal <tailB_X>.
-    Found 6-bit addsub for signal <tailB_X$share0000> created at line 203.
-    Found 6-bit register for signal <tailB_Y>.
-    Found 6-bit addsub for signal <tailB_Y$share0000> created at line 203.
-    Summary:
-	inferred   2 ROM(s).
-	inferred  49 D-type flip-flop(s).
-	inferred   8 Adder/Subtractor(s).
-	inferred   2 Multiplexer(s).
-Unit <engine> synthesized.
-
-
 Synthesizing Unit <kbdDecoder>.
-    Related source file is "C:/Users/Ja/Desktop/Snake/Snake/kbdDecoder.vhd".
+    Related source file is "C:/Users/lab/Desktop/Snake/Snake/kbdDecoder.vhd".
 WARNING:Xst:647 - Input <E0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 2-bit register for signal <D_Type>.
     Found 2-bit register for signal <DO>.
@@ -463,77 +361,66 @@ WARNING:Xst:647 - Input <E0> is never used. This port will be preserved and left
 Unit <kbdDecoder> synthesized.
 
 
+Synthesizing Unit <decAddr>.
+    Related source file is "C:/Users/lab/Desktop/Snake/Snake/decAddr.vhd".
+Unit <decAddr> synthesized.
+
+
+Synthesizing Unit <sync_ram>.
+    Related source file is "C:/Users/lab/Desktop/Snake/Snake/sync_ram.vhd".
+    Found 4096x13-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 12-bit register for signal <read_address>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  12 D-type flip-flop(s).
+Unit <sync_ram> synthesized.
+
+
+Synthesizing Unit <engine>.
+    Related source file is "C:/Users/lab/Desktop/Snake/Snake/engine.vhd".
+WARNING:Xst:647 - Input <Clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixelX> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <pixelY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <outPointsA> is never assigned. Tied to value 00000000000000.
+WARNING:Xst:1305 - Output <outPointsB> is never assigned. Tied to value 00000000000000.
+WARNING:Xst:1780 - Signal <testtest> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <mode> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <headB_Y> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <headB_X> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <headA_Y> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <headA_X> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <divider> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <directionB> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <directionA> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <decB> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <decA> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 6-bit register for signal <XMem>.
+    Found 1-bit register for signal <Start>.
+    Found 1-bit register for signal <writeMem>.
+    Found 6-bit register for signal <YMem>.
+    Found 3-bit register for signal <RGB>.
+    Found 1-bit register for signal <writeM>.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+Unit <engine> synthesized.
+
+
 Synthesizing Unit <main>.
-    Related source file is "C:/Users/Ja/Desktop/Snake/Snake/main.vhf".
+    Related source file is "C:/Users/lab/Desktop/Snake/Snake/main.vhf".
+WARNING:Xst:653 - Signal <XLXI_33_pixelY_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
+WARNING:Xst:653 - Signal <XLXI_33_pixelX_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
 WARNING:Xst:653 - Signal <XLXI_1_PointsB_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000.
-WARNING:Xst:653 - Signal <XLXI_15_pixelY_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
-WARNING:Xst:653 - Signal <XLXI_15_pixelX_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000.
-WARNING:Xst:653 - Signal <XLXI_15_Clk_50_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 Unit <main> synthesized.
 
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 3
+# RAMs                                                 : 1
+ 4096x13-bit dual-port RAM                             : 1
+# ROMs                                                 : 1
  10x200-bit ROM                                        : 1
- 4x3-bit ROM                                           : 1
- 64x2-bit ROM                                          : 1
-# Multipliers                                          : 4
- 4x10-bit multiplier                                   : 1
- 4x4-bit multiplier                                    : 2
- 4x7-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 15
- 10-bit subtractor                                     : 2
- 14-bit subtractor                                     : 2
- 4-bit adder                                           : 2
- 6-bit adder                                           : 3
- 6-bit addsub                                          : 4
- 6-bit subtractor                                      : 2
-# Counters                                             : 7
- 10-bit up counter                                     : 2
- 25-bit up counter                                     : 1
- 4-bit up counter                                      : 3
- 6-bit up counter                                      : 1
-# Registers                                            : 25
- 1-bit register                                        : 10
- 10-bit register                                       : 2
- 2-bit register                                        : 2
- 6-bit register                                        : 11
-# Comparators                                          : 93
- 10-bit comparator greatequal                          : 22
- 10-bit comparator greater                             : 2
- 10-bit comparator less                                : 9
- 10-bit comparator lessequal                           : 21
- 14-bit comparator less                                : 27
- 6-bit comparator less                                 : 12
-# Multiplexers                                         : 12
- 1-bit 10-to-1 multiplexer                             : 11
- 2-bit 44-to-1 multiplexer                             : 1
-
-=========================================================================
-
-=========================================================================
-*                       Advanced HDL Synthesis                          *
-=========================================================================
-
-Reading core <PS2_Kbd.ngc>.
-Loading core <PS2_Kbd> for timing and area information for instance <XLXI_16>.
-WARNING:Xst:1710 - FF/Latch <Start> (without init value) has a constant value of 0 in block <XLXI_15>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <DO_Rdy> is unconnected in block <XLXI_17>.
-WARNING:Xst:1290 - Hierarchical block <XLXI_17> is unconnected in block <main>.
-   It will be removed from the design.
-
-=========================================================================
-Advanced HDL Synthesis Report
-
-Macro Statistics
-# ROMs                                                 : 3
- 10x200-bit ROM                                        : 1
- 4x3-bit ROM                                           : 1
- 64x2-bit ROM                                          : 1
 # Multipliers                                          : 4
  4x10-bit multiplier                                   : 1
  4x4-bit multiplier                                    : 2
@@ -549,8 +436,13 @@ Macro Statistics
  25-bit up counter                                     : 1
  4-bit up counter                                      : 3
  6-bit up counter                                      : 1
-# Registers                                            : 76
- Flip-Flops                                            : 76
+# Registers                                            : 27
+ 1-bit register                                        : 12
+ 10-bit register                                       : 2
+ 12-bit register                                       : 1
+ 2-bit register                                        : 2
+ 3-bit register                                        : 1
+ 6-bit register                                        : 9
 # Comparators                                          : 93
  10-bit comparator greatequal                          : 22
  10-bit comparator greater                             : 2
@@ -558,16 +450,80 @@ Macro Statistics
  10-bit comparator lessequal                           : 21
  14-bit comparator less                                : 27
  6-bit comparator less                                 : 12
-# Multiplexers                                         : 10
+# Multiplexers                                         : 11
+ 1-bit 10-to-1 multiplexer                             : 11
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <PS2_Kbd.ngc>.
+Loading core <PS2_Kbd> for timing and area information for instance <XLXI_16>.
+WARNING:Xst:1426 - The value init of the FF/Latch writeM hinder the constant cleaning in the block XLXI_33.
+   You should achieve better results by setting this init to 0.
+
+Synthesizing (advanced) Unit <sync_ram>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <read_address>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 13-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <datain>        |          |
+    |     doA            | connected to signal <dataout>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <sync_ram> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4096x13-bit single-port block RAM                     : 1
+# ROMs                                                 : 1
+ 10x200-bit ROM                                        : 1
+# Multipliers                                          : 4
+ 4x10-bit multiplier                                   : 1
+ 4x4-bit multiplier                                    : 2
+ 4x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 11
+ 10-bit subtractor                                     : 2
+ 14-bit subtractor                                     : 2
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 3
+ 6-bit subtractor                                      : 2
+# Counters                                             : 7
+ 10-bit up counter                                     : 2
+ 25-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+ 6-bit up counter                                      : 1
+# Registers                                            : 93
+ Flip-Flops                                            : 93
+# Comparators                                          : 93
+ 10-bit comparator greatequal                          : 22
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 9
+ 10-bit comparator lessequal                           : 21
+ 14-bit comparator less                                : 27
+ 6-bit comparator less                                 : 12
+# Multiplexers                                         : 9
  1-bit 10-to-1 multiplexer                             : 9
- 2-bit 44-to-1 multiplexer                             : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <Start> (without init value) has a constant value of 0 in block <engine>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch writeM hinder the constant cleaning in the block engine.
+   You should achieve better results by setting this init to 0.
 
 Optimizing unit <main> ...
 
@@ -575,9 +531,9 @@ Optimizing unit <VGA_640x480> ...
 
 Optimizing unit <timer> ...
 
-Optimizing unit <engine> ...
-
 Optimizing unit <kbdDecoder> ...
+
+Optimizing unit <engine> ...
 WARNING:Xst:2677 - Node <XLXI_1/pixelY_9> of sequential type is unconnected in block <main>.
 WARNING:Xst:2677 - Node <XLXI_1/pixelY_8> of sequential type is unconnected in block <main>.
 WARNING:Xst:2677 - Node <XLXI_1/pixelY_7> of sequential type is unconnected in block <main>.
@@ -598,20 +554,11 @@ WARNING:Xst:2677 - Node <XLXI_1/pixelX_3> of sequential type is unconnected in b
 WARNING:Xst:2677 - Node <XLXI_1/pixelX_2> of sequential type is unconnected in block <main>.
 WARNING:Xst:2677 - Node <XLXI_1/pixelX_1> of sequential type is unconnected in block <main>.
 WARNING:Xst:2677 - Node <XLXI_1/pixelX_0> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <XLXI_17/D_Type_1> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <XLXI_17/D_Type_0> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <XLXI_17/DO_1> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <XLXI_17/DO_0> of sequential type is unconnected in block <main>.
-WARNING:Xst:2677 - Node <XLXI_17/DO_Rdy> of sequential type is unconnected in block <main>.
+INFO:Xst:2399 - RAMs <XLXI_29/Mram_ram2>, <XLXI_29/Mram_ram3> are equivalent, second RAM is removed
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 12.
-FlipFlop XLXI_1/hor_1 has been replicated 2 time(s)
-FlipFlop XLXI_1/hor_2 has been replicated 2 time(s)
-FlipFlop XLXI_1/hor_3 has been replicated 2 time(s)
-FlipFlop XLXI_1/hor_4 has been replicated 1 time(s)
-FlipFlop XLXI_1/ver_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -619,8 +566,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 121
- Flip-Flops                                            : 121
+# Registers                                            : 136
+ Flip-Flops                                            : 136
 
 =========================================================================
 
@@ -642,39 +589,40 @@ Final Results
 RTL Top Level Output File Name     : main.ngr
 Top Level Output File Name         : main
 Output Format                      : NGC
-Optimization Goal                  : Speed
+Optimization Goal                  : Area
 Keep Hierarchy                     : No
 
 Design Statistics
 # IOs                              : 9
 
 Cell Usage :
-# BELS                             : 1384
+# BELS                             : 1319
 #      GND                         : 2
-#      INV                         : 44
+#      INV                         : 45
 #      LUT1                        : 52
-#      LUT2                        : 111
-#      LUT2_D                      : 9
-#      LUT2_L                      : 5
-#      LUT3                        : 139
-#      LUT3_D                      : 24
-#      LUT3_L                      : 15
-#      LUT4                        : 491
-#      LUT4_D                      : 78
-#      LUT4_L                      : 70
+#      LUT2                        : 110
+#      LUT3                        : 167
+#      LUT4                        : 596
+#      LUT4_D                      : 1
+#      LUT4_L                      : 3
 #      MUXCY                       : 170
-#      MUXF5                       : 72
-#      MUXF6                       : 10
+#      MUXF5                       : 69
+#      MUXF6                       : 11
+#      MUXF7                       : 1
 #      VCC                         : 2
 #      XORCY                       : 90
-# FlipFlops/Latches                : 158
-#      FD                          : 11
-#      FDC                         : 59
-#      FDCE                        : 36
-#      FDE                         : 40
+# FlipFlops/Latches                : 173
+#      FD                          : 12
+#      FDC                         : 52
+#      FDCE                        : 35
+#      FDE                         : 49
 #      FDP                         : 2
-#      FDR                         : 1
+#      FDR                         : 9
 #      FDRE                        : 9
+#      FDS                         : 5
+# RAMS                             : 3
+#      RAMB16_S1                   : 1
+#      RAMB16_S4                   : 2
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
@@ -690,11 +638,13 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      547  out of   4656    11%  
- Number of Slice Flip Flops:            158  out of   9312     1%  
- Number of 4 input LUTs:               1038  out of   9312    11%  
+ Number of Slices:                      552  out of   4656    11%  
+ Number of Slice Flip Flops:            168  out of   9312     1%  
+ Number of 4 input LUTs:                974  out of   9312    10%  
  Number of IOs:                           9
  Number of bonded IOBs:                   9  out of    232     3%  
+    IOB Flip Flops:                       5
+ Number of BRAMs:                         3  out of     20    15%  
  Number of MULT18X18SIOs:                 2  out of     20    10%  
  Number of GCLKs:                         3  out of     24    12%  
 
@@ -719,8 +669,8 @@ Clock Information:
 -----------------------------------+-------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)   | Load  |
 -----------------------------------+-------------------------+-------+
-Clk_50MHz                          | BUFGP                   | 64    |
-XLXI_1/Clock1                      | BUFG                    | 65    |
+Clk_50MHz                          | BUFGP                   | 90    |
+XLXI_1/Clock1                      | BUFG                    | 57    |
 XLXI_9/Clock16Hz                   | NONE(XLXI_9/divisior2_3)| 5     |
 XLXI_9/Clock1Hz1                   | BUFG                    | 24    |
 -----------------------------------+-------------------------+-------+
@@ -731,16 +681,16 @@ Asynchronous Control Signals Information:
 -----------------------------------+------------------------+-------+
 Control Signal                     | Buffer(FF name)        | Load  |
 -----------------------------------+------------------------+-------+
-Clr                                | IBUF                   | 54    |
-N0(XST_GND:G)                      | NONE(XLXI_9/Clock16Hz) | 43    |
+Clr                                | IBUF                   | 46    |
+XLXI_33/Start(XLXI_33/Start:Q)     | NONE(XLXI_9/Clock16Hz) | 43    |
 -----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 15.819ns (Maximum Frequency: 63.215MHz)
-   Minimum input arrival time before clock: 4.786ns
+   Minimum period: 25.184ns (Maximum Frequency: 39.708MHz)
+   Minimum input arrival time before clock: 4.784ns
    Maximum output required time after clock: 4.283ns
    Maximum combinational path delay: No path found
 
@@ -750,84 +700,69 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 6.090ns (frequency: 164.204MHz)
-  Total number of paths / destination ports: 1275 / 98
+  Clock period: 8.271ns (frequency: 120.904MHz)
+  Total number of paths / destination ports: 1580 / 169
 -------------------------------------------------------------------------
-Delay:               6.090ns (Levels of Logic = 26)
-  Source:            XLXI_9/divisior_1 (FF)
-  Destination:       XLXI_9/divisior_24 (FF)
+Delay:               8.271ns (Levels of Logic = 4)
+  Source:            XLXI_29/Mram_ram2 (RAM)
+  Destination:       XLXI_33/RGB_2 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_9/divisior_1 to XLXI_9/divisior_24
+  Data Path: XLXI_29/Mram_ram2 to XLXI_33/RGB_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.591   0.622  XLXI_9/divisior_1 (XLXI_9/divisior_1)
-     LUT1:I0->O            1   0.704   0.000  XLXI_9/Mcount_divisior_cy<1>_rt (XLXI_9/Mcount_divisior_cy<1>_rt)
-     MUXCY:S->O            1   0.464   0.000  XLXI_9/Mcount_divisior_cy<1> (XLXI_9/Mcount_divisior_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<2> (XLXI_9/Mcount_divisior_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<3> (XLXI_9/Mcount_divisior_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<4> (XLXI_9/Mcount_divisior_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<5> (XLXI_9/Mcount_divisior_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<6> (XLXI_9/Mcount_divisior_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<7> (XLXI_9/Mcount_divisior_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<8> (XLXI_9/Mcount_divisior_cy<8>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<9> (XLXI_9/Mcount_divisior_cy<9>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<10> (XLXI_9/Mcount_divisior_cy<10>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<11> (XLXI_9/Mcount_divisior_cy<11>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<12> (XLXI_9/Mcount_divisior_cy<12>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<13> (XLXI_9/Mcount_divisior_cy<13>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<14> (XLXI_9/Mcount_divisior_cy<14>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<15> (XLXI_9/Mcount_divisior_cy<15>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<16> (XLXI_9/Mcount_divisior_cy<16>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<17> (XLXI_9/Mcount_divisior_cy<17>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<18> (XLXI_9/Mcount_divisior_cy<18>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<19> (XLXI_9/Mcount_divisior_cy<19>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<20> (XLXI_9/Mcount_divisior_cy<20>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<21> (XLXI_9/Mcount_divisior_cy<21>)
-     MUXCY:CI->O           1   0.059   0.000  XLXI_9/Mcount_divisior_cy<22> (XLXI_9/Mcount_divisior_cy<22>)
-     MUXCY:CI->O           0   0.059   0.000  XLXI_9/Mcount_divisior_cy<23> (XLXI_9/Mcount_divisior_cy<23>)
-     XORCY:CI->O           1   0.804   0.595  XLXI_9/Mcount_divisior_xor<24> (XLXI_9/Result<24>)
-     LUT2:I0->O            1   0.704   0.000  XLXI_9/Mcount_divisior_eqn_241 (XLXI_9/Mcount_divisior_eqn_24)
-     FDC:D                     0.308          XLXI_9/divisior_24
+     RAMB16_S4:CLK->DO1    3   2.800   0.706  XLXI_29/Mram_ram2 (XLXN_42<5>)
+     LUT4:I0->O            1   0.704   0.595  XLXI_33/RGB_mux0004<1>17 (XLXI_33/RGB_mux0004<1>17)
+     LUT4:I0->O            1   0.704   0.424  XLXI_33/RGB_mux0004<1>27_SW0 (N192)
+     LUT4:I3->O            2   0.704   0.622  XLXI_33/RGB_mux0004<1>27 (XLXI_33/RGB_mux0004<1>27)
+     LUT2:I0->O            1   0.704   0.000  XLXI_33/RGB_mux0004<1>110 (XLXI_33/RGB_mux0004<1>)
+     FDE:D                     0.308          XLXI_33/RGB_1
     ----------------------------------------
-    Total                      6.090ns (4.873ns logic, 1.217ns route)
-                                       (80.0% logic, 20.0% route)
+    Total                      8.271ns (5.924ns logic, 2.347ns route)
+                                       (71.6% logic, 28.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_1/Clock1'
-  Clock period: 15.819ns (frequency: 63.215MHz)
-  Total number of paths / destination ports: 24076 / 111
+  Clock period: 25.184ns (frequency: 39.708MHz)
+  Total number of paths / destination ports: 15395 / 102
 -------------------------------------------------------------------------
-Delay:               15.819ns (Levels of Logic = 13)
-  Source:            XLXI_1/hor_3_1 (FF)
+Delay:               25.184ns (Levels of Logic = 20)
+  Source:            XLXI_1/ver_1 (FF)
   Destination:       XLXI_1/B (FF)
   Source Clock:      XLXI_1/Clock1 rising
   Destination Clock: XLXI_1/Clock1 rising
 
-  Data Path: XLXI_1/hor_3_1 to XLXI_1/B
+  Data Path: XLXI_1/ver_1 to XLXI_1/B
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              3   0.591   0.706  XLXI_1/hor_3_1 (XLXI_1/hor_3_1)
-     LUT3:I0->O           22   0.704   1.168  XLXI_1/G0_mux00026111 (XLXI_1/N95)
-     LUT4:I3->O           11   0.704   0.937  XLXI_1/mux0059_cmp_eq00091 (XLXI_1/mux0059_cmp_eq0009)
-     LUT4:I3->O            1   0.704   0.424  XLXI_1/G3_mux000052 (XLXI_1/G3_mux000052)
-     LUT4:I3->O            1   0.704   0.455  XLXI_1/G3_mux000079 (XLXI_1/G3_mux000079)
-     LUT4:I2->O            2   0.704   0.526  XLXI_1/G3_mux0000103 (XLXI_1/G3_mux0000103)
-     LUT3:I1->O            1   0.704   0.000  XLXI_1/B_mux000053_G (N389)
-     MUXF5:I1->O           1   0.321   0.455  XLXI_1/B_mux000053 (XLXI_1/B_mux000053)
-     LUT4:I2->O            1   0.704   0.424  XLXI_1/B_mux000089 (XLXI_1/B_mux000089)
-     LUT4_L:I3->LO         1   0.704   0.104  XLXI_1/B_mux0000131 (XLXI_1/B_mux0000131)
-     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000171 (XLXI_1/B_mux0000171)
-     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000219 (XLXI_1/B_mux0000219)
-     LUT4_L:I3->LO         1   0.704   0.104  XLXI_1/B_mux0000419 (XLXI_1/B_mux0000419)
-     LUT4:I3->O            1   0.704   0.000  XLXI_1/B_mux0000516 (XLXI_1/B_mux0000)
+     FDCE:C->Q            68   0.591   1.449  XLXI_1/ver_1 (XLXI_1/ver_1)
+     LUT3:I0->O           14   0.704   1.004  XLXI_1/Mrom__rom0000181 (XLXI_1/Mrom__rom000018)
+     LUT4:I3->O            1   0.704   0.455  XLXI_1/G0_mux0002615 (XLXI_1/G0_mux0002615)
+     LUT3:I2->O            1   0.704   0.455  XLXI_1/G0_mux0002634 (XLXI_1/G0_mux0002634)
+     LUT4:I2->O            1   0.704   0.424  XLXI_1/G0_mux0002680 (XLXI_1/G0_mux0002680)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/G0_mux0002763_SW0 (N292)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/G0_mux0002763 (XLXI_1/G0_mux0002763)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/G0_mux0002809 (XLXI_1/G0_mux0002809)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/G0_mux0002858 (XLXI_1/G0_mux0002858)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/G0_mux0002909 (XLXI_1/G0_mux0002909)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/G0_mux0002941 (XLXI_1/G0_mux0002941)
+     LUT4:I3->O            1   0.704   0.455  XLXI_1/G0_mux00021691 (XLXI_1/G0_mux00021691)
+     LUT3:I2->O            2   0.704   0.451  XLXI_1/G0_mux00021803 (XLXI_1/G0_mux0002)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000256_SW0 (N258)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000256 (XLXI_1/B_mux0000256)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000360_SW0 (N260)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000360 (XLXI_1/B_mux0000360)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000411 (XLXI_1/B_mux0000411)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000462 (XLXI_1/B_mux0000462)
+     LUT4:I3->O            1   0.704   0.424  XLXI_1/B_mux0000509_SW0 (N326)
+     LUT4:I3->O            1   0.704   0.000  XLXI_1/B_mux0000509 (XLXI_1/B_mux0000)
      FDCE:D                    0.308          XLXI_1/B
     ----------------------------------------
-    Total                     15.819ns (9.668ns logic, 6.151ns route)
-                                       (61.1% logic, 38.9% route)
+    Total                     25.184ns (14.979ns logic, 10.205ns route)
+                                       (59.5% logic, 40.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_9/Clock16Hz'
@@ -853,29 +788,31 @@ Delay:               2.982ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_9/Clock1Hz1'
-  Clock period: 7.632ns (frequency: 131.027MHz)
-  Total number of paths / destination ports: 268 / 24
+  Clock period: 10.619ns (frequency: 94.171MHz)
+  Total number of paths / destination ports: 628 / 24
 -------------------------------------------------------------------------
-Delay:               7.632ns (Levels of Logic = 5)
-  Source:            XLXI_9/seconds_0 (FF)
-  Destination:       XLXI_9/minutes_4 (FF)
+Delay:               10.619ns (Levels of Logic = 7)
+  Source:            XLXI_9/seconds_2 (FF)
+  Destination:       XLXI_9/minutes_3 (FF)
   Source Clock:      XLXI_9/Clock1Hz1 rising
   Destination Clock: XLXI_9/Clock1Hz1 rising
 
-  Data Path: XLXI_9/seconds_0 to XLXI_9/minutes_4
+  Data Path: XLXI_9/seconds_2 to XLXI_9/minutes_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              6   0.591   0.844  XLXI_9/seconds_0 (XLXI_9/seconds_0)
-     LUT3:I0->O            1   0.704   0.424  XLXI_9/minutes_cmp_eq0000_SW0 (N32)
-     LUT4:I3->O            9   0.704   0.995  XLXI_9/minutes_cmp_eq0000 (XLXI_9/minutes_cmp_eq0000)
-     LUT4:I0->O            2   0.704   0.451  XLXI_9/minutes_mux0001<3>4211 (XLXI_9/N21)
-     LUT4:I3->O            1   0.704   0.499  XLXI_9/minutes_mux0001<4>_SW1 (N37)
-     LUT4:I1->O            2   0.704   0.000  XLXI_9/minutes_mux0001<4> (XLXI_9/minutes_mux0001<4>)
-     FDE:D                     0.308          XLXI_9/Min_4
+     FDC:C->Q              5   0.591   0.808  XLXI_9/seconds_2 (XLXI_9/seconds_2)
+     LUT4:I0->O            3   0.704   0.610  XLXI_9/Madd_minutes_add0000_cy<3>11 (XLXI_9/Madd_minutes_add0000_cy<3>)
+     LUT4:I1->O            2   0.704   0.451  XLXI_9/minutes_cmp_eq0000_SW0 (N50)
+     LUT4:I3->O           12   0.704   1.040  XLXI_9/minutes_cmp_eq0000 (XLXI_9/minutes_cmp_eq0000)
+     LUT3:I1->O            1   0.704   0.499  XLXI_9/minutes_mux0000<3>1 (XLXI_9/minutes_mux0000<3>)
+     LUT3:I1->O            4   0.704   0.762  XLXI_9/minutes_cmp_eq000165_SW0 (N244)
+     LUT4:I0->O            2   0.704   0.622  XLXI_9/minutes_cmp_eq000165 (XLXI_9/minutes_cmp_eq0001)
+     LUT4:I0->O            2   0.704   0.000  XLXI_9/minutes_mux0001<3>1 (XLXI_9/minutes_mux0001<3>)
+     FDE:D                     0.308          XLXI_9/Min_3
     ----------------------------------------
-    Total                      7.632ns (4.419ns logic, 3.213ns route)
-                                       (57.9% logic, 42.1% route)
+    Total                     10.619ns (5.827ns logic, 4.792ns route)
+                                       (54.9% logic, 45.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
@@ -903,7 +840,7 @@ Offset:              3.980ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_1/Clock1'
   Total number of paths / destination ports: 12 / 12
 -------------------------------------------------------------------------
-Offset:              4.786ns (Levels of Logic = 2)
+Offset:              4.784ns (Levels of Logic = 2)
   Source:            Clr (PAD)
   Destination:       XLXI_1/Y_5 (FF)
   Destination Clock: XLXI_1/Clock1 rising
@@ -912,12 +849,12 @@ Offset:              4.786ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            55   1.218   1.348  Clr_IBUF (Clr_IBUF)
-     LUT4:I1->O           12   0.704   0.961  XLXI_1/X_and0000 (XLXI_1/X_and0000)
+     IBUF:I->O            47   1.218   1.346  Clr_IBUF (Clr_IBUF)
+     LUT4:I1->O           12   0.704   0.961  XLXI_1/X_and000049 (XLXI_1/X_and0000)
      FDE:CE                    0.555          XLXI_1/X_0
     ----------------------------------------
-    Total                      4.786ns (2.477ns logic, 2.309ns route)
-                                       (51.7% logic, 48.3% route)
+    Total                      4.784ns (2.477ns logic, 2.307ns route)
+                                       (51.8% logic, 48.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_1/Clock1'
@@ -941,14 +878,14 @@ Offset:              4.283ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.00 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 18.75 secs
  
 --> 
 
-Total memory usage is 285088 kilobytes
+Total memory usage is 235944 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  126 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   49 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

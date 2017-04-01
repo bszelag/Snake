@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Ja\Desktop\Snake\Snake\main.ncd
-OUTFILE=C:\Users\Ja\Desktop\Snake\Snake\main.bit
+INFILE=C:\Users\lab\Desktop\Snake\Snake\main.ncd
+OUTFILE=C:\Users\lab\Desktop\Snake\Snake\main.bit
 FAMILY=Spartan3E
 PART=xc3s500e-4fg320
-WORKINGDIR=C:\Users\Ja\Desktop\Snake\Snake
-LICENSE=WebPack
-USER_INFO=211260886_0_0_039
+WORKINGDIR=C:\Users\lab\Desktop\Snake\Snake
+LICENSE=ISE
+USER_INFO=174693031_177724690_210552578_727

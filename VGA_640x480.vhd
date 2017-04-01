@@ -959,9 +959,9 @@ begin
 			else --rysuj to co podesle engine
 				X <= std_logic_vector(to_unsigned(fieldX,6));
 				Y <= std_logic_vector(to_unsigned(fieldY,6));
-				R <= RGB(0);
+				R <= RGB(2);
 				G <= RGB(1);
-				B <= RGB(2);
+				B <= RGB(0);
 			end if;
 				pixelX <= std_logic_vector(to_unsigned(hor-144,10));
 				pixelY <= std_logic_vector(to_unsigned(ver-31,10));

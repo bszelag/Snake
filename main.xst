@@ -7,8 +7,8 @@ run
 -ofmt NGC
 -p xc3s500e-4-fg320
 -top main
--opt_mode Speed
--opt_level 1
+-opt_mode Area
+-opt_level 2
 -iuc NO
 -keep_hierarchy No
 -netlist_hierarchy As_Optimized
@@ -25,7 +25,7 @@ run
 -verilog2001 YES
 -fsm_extract YES -fsm_encoding Auto
 -safe_implementation No
--fsm_style LUT
+-fsm_style Bram
 -ram_extract Yes
 -ram_style Auto
 -rom_extract Yes
@@ -36,7 +36,7 @@ run
 -shift_extract YES
 -xor_collapse YES
 -rom_style Auto
--auto_bram_packing NO
+-auto_bram_packing YES
 -mux_extract Yes
 -resource_sharing YES
 -async_to_sync NO
