@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-03-30T19:30:58</DateModified>
+  <DateModified>2017-04-14T17:51:04</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Ja/Desktop/Snake/Snake/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Ja/Desktop/Snake/Snake\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Ja/Desktop/ZAJECIA/Snake/Snake/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Ja/Desktop/ZAJECIA/Snake/Snake\</ImplementationReportsDirectory>
   <DateInitialized>2017-03-04T17:21:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
