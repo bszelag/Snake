@@ -1,7 +1,0 @@
-vhdl work "C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\VGA_640x480.vhd"
-vhdl work "C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\timer.vhd"
-vhdl work "C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\sync_ram.vhd"
-vhdl work "C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\kbdDecoder.vhd"
-vhdl work "C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\engine.vhd"
-vhdl work "C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\decAddr.vhd"
-vhdl work "C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\main.vhf"

@@ -1,7 +1,0 @@
-vhdl work "VGA_640x480.vhd"
-vhdl work "timer.vhd"
-vhdl work "sync_ram.vhd"
-vhdl work "kbdDecoder.vhd"
-vhdl work "engine.vhd"
-vhdl work "decAddr.vhd"
-vhdl work "main.vhf"

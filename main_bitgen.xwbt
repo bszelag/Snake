@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\main.ncd
-OUTFILE=C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake\main.bit
-FAMILY=Spartan3E
-PART=xc3s500e-4fg320
-WORKINGDIR=C:\Users\Ja\Desktop\ZAJECIA\Snake\Snake
-LICENSE=WebPack
-USER_INFO=211260886_0_0_039
