@@ -1,2 +1,0 @@
-vhdtdtfi -lib work decAddr.vhd -prj Snake -o decAddr.spl -module decAddr -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e decAddr.spl C:/Users/lab/Desktop/Snake/Snake/decAddr.sym 
